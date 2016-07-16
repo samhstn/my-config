@@ -1,4 +1,4 @@
-Dev setup
+My Dev setup
 
 Useful OSX setup commands
 defaults write -g ApplePressAndHoldEnabled -bool false
