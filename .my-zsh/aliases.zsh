@@ -24,7 +24,7 @@ alias ll='ls -lh'
 alias la='ls -lAh'
 
 # Push and pop directories on directory stack
-alias pu='pushd'
+alias pu='pushd .'
 alias po='popd'
 
 function take() {
@@ -43,3 +43,11 @@ alias cl='clear'
 alias m='vim'
 alias colours='spectrum_ls'
 alias st='open -a SourceTree .'
+alias za='vim ~/.my-zsh/aliases.zsh'
+alias zga='vim ~/.my-zsh/git-aliases.zsh'
+alias ns='npm run startmon'
+alias nt='npm run testmon'
+alias nw='npm run watch'
+alias t='tig'
+alias h='tail -12 ~/.zsh_history' # TODO: strip the date part
+alias pg='postgres -D /usr/local/var/postgres'
