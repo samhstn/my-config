@@ -1,8 +1,13 @@
 set -o vi # vi in terminal
+setopt VI
+export EDITOR="vi"
+setopt NO_BEEP
 
 setopt auto_pushd # cd push old directory onto the directory stack
 setopt pushd_ignore_dups # dont insert duplicates into the directory stack
 setopt pushdminus # pushing directory aliases with minuses
+
+# export HISTCONTROL=ignoreboth:erasedups
 
 export ZSH=$HOME/.my-zsh # Path to .my-zsh
 
