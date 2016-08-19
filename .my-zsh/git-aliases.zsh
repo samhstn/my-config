@@ -44,12 +44,14 @@ alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
 alias gbd='git branch -D'
-alias gbda='git checkout master && git branch | command grep -vE "^(\*|\s*master\s*$)" | command xargs -n 1 git branch -d && echo "deleted all"'
+alias gbda='git checkout master && git branch | command grep -vE "^(\*|\s*master\s*$)" | command xargs -n 1 git branch -D && echo "deleted all"'
 alias gcmsg='git commit -m'
 alias gcb='git checkout -b'
 alias gclean='git reset --hard && git clean -dfx'
 alias gco='git checkout'
-gclone() { git clone "https://github.com/$1.git" }
+function gclone() {
+  git clone "https://github.com/$1.git"
+}
 alias gd='git diff'
 alias gcm='git checkout master'
 
@@ -57,7 +59,7 @@ alias ggpush='git push origin $(git_current_branch)'
 alias ggpull='git pull origin $(git_current_branch)'
 alias gl='git pull'
 alias gm='git merge'
-alias gmom='git merge origin/master'
+alias gmm='git merge master'
 alias gp='git push'
 alias gst='git status'
 alias grhard='git reset --hard'
