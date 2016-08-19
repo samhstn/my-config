@@ -12,7 +12,6 @@ set clipboard=unnamed
 
 filetype off "required for vundle
 
-
 set noerrorbells "Quiet the bell
 
 set tabstop=2 "show existing tab with 2 spaces width
@@ -35,10 +34,36 @@ cmap Q q!
 nnoremap D d$
 " Yank to the end of the line
 nnoremap Y y$
-nnoremap << :vertical resize -10<CR>
-nnoremap >> :vertical resize +10<CR>
+" nnoremap <C-y> <C-z>
+nnoremap << :vertical resize -10<cr>
+nnoremap >> :vertical resize +10<cr>
+nnoremap , ;
+command Vrc e~/.vimrc
 
 " Plugins
 source $HOME/.vim/plugins.vim " Only syntastic
 source $HOME/.vim/syntastic.vim " Config for syntastic
 
+"Eatchar function described in vimhelp
+func! Eatchar(pat)
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
+endfunc
+
+" keystroke shortcuts
+iab <silent> log console.log('');<esc>hhi<c-r>=Eatchar('\s')<cr>
+iab html <esc>:0r~/templates/index.html<enter>
+iab hapi <esc>:0r~/templates/hapi-server.js<enter>
+iab switch switch () {<enter>case:<enter>default:<enter>}<esc>?()<Enter>a
+
+" Find ctags file
+set tags=tags;/
+
+" Move visually selected line text up, down, left and right
+vnoremap <c-j> xPmqgvdmz'qPjV'zk
+vnoremap <c-k> xPmqgv<esc>mz'qkdd'zPkV'q
+" Move visually selected block up, down, left and right
+vnoremap <c-right> xpgvlolo
+vnoremap <c-left> xhPgvhoho
+vnoremap <c-down> xjPgvjojo
+vnoremap <c-up> xkPgvkoko
