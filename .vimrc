@@ -9,6 +9,7 @@ set autoindent
 syntax enable 
 set background=dark
 set clipboard=unnamed
+set wildmenu "Better tab completion when looking for files in command mode
 
 filetype off "required for vundle
 
@@ -40,10 +41,6 @@ nnoremap >> :vertical resize +10<cr>
 nnoremap , ;
 command Vrc e~/.vimrc
 
-" Plugins
-source $HOME/.vim/plugins.vim " Only syntastic
-source $HOME/.vim/syntastic.vim " Config for syntastic
-
 "Eatchar function described in vimhelp
 func! Eatchar(pat)
   let c = nr2char(getchar(0))
@@ -51,13 +48,11 @@ func! Eatchar(pat)
 endfunc
 
 " keystroke shortcuts
-iab <silent> log console.log('');<esc>hhi<c-r>=Eatchar('\s')<cr>
-iab html <esc>:0r~/templates/index.html<enter>
-iab hapi <esc>:0r~/templates/hapi-server.js<enter>
-iab switch switch () {<enter>case:<enter>default:<enter>}<esc>?()<Enter>a
-
-" Find ctags file
-set tags=tags;/
+" type: 'clog<tab>' to type console.log
+iab <silent> clog console.log();<esc>hi<c-r>=Eatchar('\s')<cr>
+iab hhtml <esc>:0r~/templates/index.html<enter>
+iab hhapi <esc>:0r~/templates/hapi-server.js<enter>
+iab sswitch switch () {<enter>case:<enter>default:<enter>}<esc>?()<Enter>a
 
 " Move visually selected line text up, down, left and right
 vnoremap <c-j> xPmqgvdmz'qPjV'zk
@@ -67,3 +62,16 @@ vnoremap <c-right> xpgvlolo
 vnoremap <c-left> xhPgvhoho
 vnoremap <c-down> xjPgvjojo
 vnoremap <c-up> xkPgvkoko
+" be able to switch between tabs using ctrl and arrow keys
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+" be able to move place of tab using alt and arrow keys
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
+let mapleader="\<space>"
+
+nnoremap <leader>d gDf'gfn
+nnoremap <leader>s <c-o><c-o><c-o>zz
+
+syntax on
