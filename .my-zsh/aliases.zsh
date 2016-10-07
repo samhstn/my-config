@@ -50,7 +50,15 @@ alias lll='ls' # for typing ls with one hand
 alias pg='postgres -D /usr/local/var/postgres'
 alias ss='echo "sourcing zshrc"; source ~/.zshrc'
 alias j='jobs'
-alias nmtags='ctags -R --exclude="node_modules/*/node_modules/*" .'
+alias rt='node_modules/.bin/riot'
+alias ns='npm start'
+alias nt='npm t'
+alias nw='npm run watch'
+alias nsm='n startmon'
+alias rmt='rm *.temp.* && echo "removing all *.temp.* files"'
+alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
+alias nc='npm run coverage'
+alias ntm='npm run testmon'
 
 # jobs in foreground
 function f() {
@@ -101,8 +109,9 @@ function hrm() {
 }
 
 # Numbered case insensitive recursive search in current dir
+# Exclude gitignored files
 function grepe() {
-  grep -ri $1 . --exclude-dir={node_modules,production,coverage,.git,build,.sass-cache} |
+  grep -ri $1 . --exclude-dir={node_modules,production,coverage,.git,build,.sass-cache} --exclude=npm-debug.log|
   awk '{print NR, $0}'
 }
 
@@ -159,6 +168,24 @@ function th() {
   rm ~/.zsh_history
   mv ~/.zsh_history.new ~/.zsh_history
   echo '...trimmed history'
+}
+
+# mr opens the last vim file I had open
+function mr() {
+  history |
+  awk '{print substr($0, index($0, $2))}' | # prints all the arguments excluding the 1st
+  egrep '^m\ ' | # filter in lines beginning with m<space>
+  awk '{print $2}' |
+  tail -n -1 |
+  xargs -o vim
+}
+
+function ml() {
+  history |
+  tail -n -1 |
+  awk '{print substr($0, index($0, $2))}' |
+  awk '{print $2}' |
+  xargs -o vim
 }
 
 # TODO: If package is not found, look in lower dirs
