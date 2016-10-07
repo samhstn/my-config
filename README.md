@@ -38,3 +38,5 @@ ctrl + alt + cmd + m (middle) - Centre
 Clone the repo `git clone https://github.com/shouston3/My-Config.git && cd My-Config`
 
 run the setup: `source setup.sh`
+
+Then open a new terminal window to see your new setup
