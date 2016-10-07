@@ -38,9 +38,3 @@ ctrl + alt + cmd + m (middle) - Centre
 Clone the repo `git clone https://github.com/shouston3/My-Config.git && cd My-Config`
 
 run the setup: `source setup.sh`
-
-##### Lastly you will need to install the vim plugins
-
-(Currently it is only syntastic)
-
-Go to a vim file and run :PluginInstall
