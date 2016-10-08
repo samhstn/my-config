@@ -91,6 +91,9 @@ Cache your git credentials by running:
 
 `git config --global credential.helper osxkeychain`
 
+`git config --global user.name <yourname>`
+`git config --global user.email <your@email.com>`
+
 #### Postgres
 
 tbd
