@@ -1,42 +1,109 @@
 # My Dev setup
 
-### Useful OSX setup commands
-defaults write -g ApplePressAndHoldEnabled -bool false
-  - stop popup of accented keys
-defaults write com.apple.finder AppleShowAllFiles TRUE
-  - See hidden files in finder window
+# Chrome
+Install Chrome and set it as the default browser
+Add the Vimium extension
 
-### Applications to download
-Karabiner - for faster key repeat and key remappings
-Seil - for remapping caps lock key
-Spectacles for easier arranging of your page
+## Applications to download
+Spectacle - For quick setting of your application window sizes
+Karabiner - Faster key repeat and key remapping
+Seil - For remapping the caps lock key
+Source Tree - For better git visualization and management
+iterm2 - For more control in with your terminal setup
+Atom - A easily configurable, beginner friendly text editor which is good for pair programming
 
-##### Karabiner config
-Faster key repeat
+#### Spectacle
+These are the only commands I use
+I have configured them away from the default to not override other hotkeys
 
-Delay until repeat: 150
+Fullscreen: cmd + alt + ctrl + p
+Center: cmd + alt + ctrl + m
+Left Half: cmd + alt + ctrl + h
+Right Half: cmd + alt + ctrl + l
+Top Half: cmd + alt + ctrl + k
+Bottom Half: cmd + alt + ctrl + j
 
-Key repeat: 20
+Ensure > System Preferences > Security you have allowed Spectacle control to your computer
 
-----
+#### Karabiner
 
-Map caps lock to escape key and ctrl key
+> General > Change Control_L Key(Left Control) dropdown
+Control_L to Control_L (+ When you type Control_L only, send Escape)
 
-Karabiner:
-  Tick `Control_L` to `Control_L` (+ when you type Con… send Escape)
+> Key repeat
+Tick: override the key repeat values of system
+Set: Delay until repeat: 150, Key repeat: 25
 
-Seil:
-  Map caps lock to left ctrl key
+Ensure > System Preferences > Security you have allowed Karabiner control to your computer
 
-##### Specticle config
-ctrl + alt + cmd + p (full page) - Fullscreen
+#### Seil
 
-ctrl + alt + cmd + m (middle) - Centre
+Click change caps lock key and set input key code: 59
 
-### To set up my dotfiles run:
+System Preferences > keyboard > modifier keys
+Change Caps Lock key to "No Action"
 
-Clone the repo `git clone https://github.com/shouston3/My-Config.git && cd My-Config`
+#### Source Tree
 
-run the setup: `source setup.sh`
+tbd
 
-Then open a new terminal window to see your new setup
+#### iterm2
+
+> Preferences (cmd + ,) > General
+Untick "Confirm closing multiple sessions"
+Untick "Confirm Quit iTerm2"
+
+> Preferences > Profiles > General > Working directory
+Select Reuse previous session's directory
+
+> Preferences > Profiles > Window > Settings For New windows
+Columns: 250, Rows: 100 - For a full screen terminal window each session
+
+#### Atom
+
+tbd
+
+#### Misc
+
+> System Preferences > Trackpad
+Tick: "Tap to click"
+
+To get rid of press and hold character completion, run:
+`defaults write -g ApplePressAndHoldEnabled -bool false`
+
+Empty the dock of every application and only have:
+Finder, Chrome, iterm2, SourceTree, Atom and Trash
+
+Hide the dock by right clicking it and selecting:
+"Turn hiding on"
+
+## Programs
+
+#### Homebrew
+
+Follow instructions here: http://brew.sh
+
+#### Git
+
+`brew install git`
+
+Cache your git credentials by running:
+
+`git config --global credential.helper osxkeychain`
+
+#### Postgres
+
+tbd
+
+#### Redis
+
+tbd
+
+#### Sass
+
+tbd
+
+## Dot files
+
+tbd
+
