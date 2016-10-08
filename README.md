@@ -85,6 +85,8 @@ Follow instructions here: http://brew.sh
 
 #### Git
 
+`brew update`
+
 `brew install git`
 
 Cache your git credentials by running:
@@ -94,17 +96,45 @@ Cache your git credentials by running:
 `git config --global user.name <yourname>`
 `git config --global user.email <your@email.com>`
 
+Note: if you have two factor authentication, your password will be your pa-key
+
+#### Node
+
+`brew install node`
+
 #### Postgres
 
-tbd
+`brew update`
+
+`brew install postgres`
+
+Start the postgres server: `postgres -D /usr/local/var/postgres`
+
+In a new terminal window run: `psql -d postgres`
 
 #### Redis
 
-tbd
+`brew update`
+
+`brew install redis`
+
+Start the redis server: `redis-server`
+
+In a new terminal window run: `redis-cli`
+
+Now type `ping` and it should respond `pong`
 
 #### Sass
 
-tbd
+`gem install sass`
+
+If you get a permissions error, DONT SUDO!
+
+Instead change ownership of that directory
+
+`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
+
+Then run the command again
 
 ## Dot files
 
