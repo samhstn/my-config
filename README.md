@@ -61,6 +61,11 @@ Click change caps lock key and set input key code: 59
 **`> System Preferences > keyboard > modifier keys`**
 Change Caps Lock key to "No Action"
 
+
+
+
+
+
 ----
 
 ### Source Tree
