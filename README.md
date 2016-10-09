@@ -33,7 +33,7 @@ Ensure in **`> System Preferences > Security`** you have allowed Spectacle contr
 ### Karabiner
 
 **`> General > Change Control_L Key(Left Control)`** dropdown
-Control_L to Control_L (+ When you type Control_L only, send Escape)
+Tick: Control_L to Control_L (+ When you type Control_L only, send Escape)
 
 **`> Key repeat`**
 Tick: override the key repeat values of system
