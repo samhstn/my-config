@@ -212,4 +212,6 @@ Your terminal should look something like this
 
 <img src="imgs/terminal.png" />
 
-Now your set up with exactly my configuration. If you think I have missed anything out, or should be doing something differently let me know through <img src="https://img.shields.io/badge/gitter-shosuton3-brightgreen.svg" />
+Now your set up with exactly my configuration. If you think I have missed anything out, or should be doing something differently let me know through gitter
+
+<img src="https://img.shields.io/badge/gitter-shosuton3-brightgreen.svg" height="50px" />
