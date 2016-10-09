@@ -203,3 +203,7 @@ They can be installed with:
 `curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-aliases.plugin.zsh > ~/.oh-my-zsh/plugins/sams-aliases.plugin.zsh`
 
 Then set up by adding "sams-aliases" to your plugins
+
+Your terminal should look something like
+
+<img src="img/terminal.png" />
