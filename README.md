@@ -15,7 +15,7 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 
 **iterm2** - For more control in with your terminal setup
 
-**Atom** - A easily configurable, beginner friendly text editor which is good for pair programming
+**Atom** - A easily configurable, beginner friendly text editor which is great for pair programming
 
 ----
 
