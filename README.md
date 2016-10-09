@@ -17,6 +17,8 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 
 **Atom** - A easily configurable, beginner friendly text editor which is good for pair programming
 
+----
+
 ### Spectacle
 
 <img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" height="150px" />
@@ -33,6 +35,8 @@ I have configured them away from the default to not override other hotkeys
 
 Ensure in **`> System Preferences > Security`** you have allowed Spectacle control to your computer
 
+----
+
 ### Karabiner
 
 <img src="https://dl2.macupdate.com/images/icons256/25141.png" align="right" height="150px" />
@@ -46,6 +50,8 @@ Set: Delay until repeat: 150, Key repeat: 25
 
 Ensure in **`> System Preferences > Security`** you have allowed Karabiner control to your computer
 
+----
+
 ### Seil
 
 <img src="https://pqrs.org/osx/karabiner/img/seil-icon@2x.png" align="right" height="150px" />
@@ -55,11 +61,15 @@ Click change caps lock key and set input key code: 59
 **`> System Preferences > keyboard > modifier keys`**
 Change Caps Lock key to "No Action"
 
+----
+
 ### Source Tree
 
 <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
 
 Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
+
+----
 
 ### iterm2
 
@@ -75,6 +85,8 @@ Select Reuse previous session's directory
 **`> Preferences > Profiles > Window > Settings For New windows`**
 Columns: 250, Rows: 100 - For a full screen terminal window each session
 
+----
+
 ### Atom
 
 <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
@@ -82,6 +94,8 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 Themes: `seti-ui` and `seti-syntax`
 
 Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
+
+----
 
 ### Misc
 
