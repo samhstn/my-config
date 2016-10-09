@@ -77,7 +77,7 @@ function grepe() {
   awk '{print NR, $0}'
 }
 
-# vo n opens a file n from the grepe output
+# vo n opens a file n from the last grepe output that has been run within the last 20 commands
 function vo() {
   arg=${1-1} # use arg if defined, else default to 1
   history |
