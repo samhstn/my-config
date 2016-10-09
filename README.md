@@ -139,14 +139,22 @@ Then run the command again
 
 ## Dot files
 
-My vim config can be found [here]() and dowloaded with:
+My vim config can be found [here](https://github.com/shouston3/My-Config/blob/master/.vimrc) and dowloaded with:
 
 `curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
 
 I prefer to use the zsh shell with the oh-my-zsh extensions as opposed to the bash shell, see why [here]()
 
-My terminal theme can be found [here]() and after you have oh-my-zsh installed, downloaded with:
+My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, installed with:
 
-`tbd`
+`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-theme.zsh-theme > ~/.oh-my-zsh/themes`
 
-[Here]() are the functions and aliases I use day to day
+Then set up by changing `ZSH_THEME="robbyrussel"` to `ZSH_THEME="sams-theme"`
+
+[Here](https://github.com/shouston3/My-Config/blob/master/sams-aliases.plugin.zsh) are the functions and aliases I use day to day
+
+They can be installed with:
+
+`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-aliases.plugin.zsh > ~/.oh-my-zsh/plugins/sams-aliases.plugin.zsh`
+
+Then set up by adding it to your plugins
