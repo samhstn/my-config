@@ -214,4 +214,4 @@ Your terminal should look something like this
 
 Now your set up with exactly my configuration. If you think I have missed anything out, or should be doing something differently let me know through gitter
 
-[https://img.shields.io/badge/gitter-shouston3-brightgreen.svg"](https://gitter.im/shouston3")
+[https://img.shields.io/badge/gitter-shouston3-brightgreen.svg](https://gitter.im/shouston3")
