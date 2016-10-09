@@ -143,7 +143,7 @@ My vim config can be found [here](https://github.com/shouston3/My-Config/blob/ma
 
 `curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
 
-I prefer to use the zsh shell with the oh-my-zsh extensions as opposed to the bash shell, see why [here]()
+I prefer to use the zsh shell with the oh-my-zsh extensions as opposed to the bash shell, see why [here](https://github.com/shouston3/My-Config/blob/master/WHY_ZSH.md)
 
 My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, installed with:
 
