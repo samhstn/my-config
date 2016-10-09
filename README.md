@@ -19,7 +19,7 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 
 ### Spectacle
 
-<img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" height="100px" />
+<img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" height="150px" />
 
 These are the only commands I use
 I have configured them away from the default to not override other hotkeys
@@ -35,7 +35,7 @@ Ensure in **`> System Preferences > Security`** you have allowed Spectacle contr
 
 ### Karabiner
 
-<img src="https://dl2.macupdate.com/images/icons256/25141.png" align="right" />
+<img src="https://dl2.macupdate.com/images/icons256/25141.png" align="right" height="150px" />
 
 **`> General > Change Control_L Key(Left Control)`** dropdown
 Tick: Control_L to Control_L (+ When you type Control_L only, send Escape)
@@ -48,7 +48,7 @@ Ensure in **`> System Preferences > Security`** you have allowed Karabiner contr
 
 ### Seil
 
-<img src="https://pqrs.org/osx/karabiner/img/seil-icon@2x.png" align="right" />
+<img src="https://pqrs.org/osx/karabiner/img/seil-icon@2x.png" align="right" height="150px" />
 
 Click change caps lock key and set input key code: 59
 
@@ -57,13 +57,13 @@ Change Caps Lock key to "No Action"
 
 ### Source Tree
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
 
 Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
 
 ### iterm2
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
 
 **`> Preferences (cmd + ,) > General`**
 Untick "Confirm closing multiple sessions"
@@ -77,7 +77,7 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 ### Atom
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
 
 Themes: `seti-ui` and `seti-syntax`
 
@@ -85,7 +85,7 @@ Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `mar
 
 ### Misc
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
 
 **`> System Preferences > Trackpad`**
 Tick: "Tap to click"
