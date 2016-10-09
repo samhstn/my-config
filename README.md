@@ -206,4 +206,4 @@ Then set up by adding "sams-aliases" to your plugins
 
 Your terminal should look something like
 
-<img src="img/terminal.png" />
+<img src="imgs/terminal.png" />
