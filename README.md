@@ -1,23 +1,28 @@
-# My Dev setup
+# My OSX Configuration
 
-# Chrome
+## Chrome
 Install Chrome and set it as the default browser
-Add the Vimium extension
+Add the [Vimium Chrome Extension](https://vimium.github.io/)
 
 ## Applications to download
-Spectacle - For quick setting of your application window sizes
-Karabiner - Faster key repeat and key remapping
-Seil - For remapping the caps lock key
-Source Tree - For better git visualization and management
-iterm2 - For more control in with your terminal setup
-Atom - A easily configurable, beginner friendly text editor which is good for pair programming
+**Spectacle** - For quick setting of your application window sizes
 
-#### Spectacle
+**Karabiner** - Faster key repeat and key remapping
+
+**Seil** - For remapping the caps lock key
+
+**Source Tree** - For better git visualization and management
+
+**iterm2** - For more control in with your terminal setup
+
+**Atom** - A easily configurable, beginner friendly text editor which is good for pair programming
+
+### Spectacle
 These are the only commands I use
 I have configured them away from the default to not override other hotkeys
 
 Fullscreen: cmd + alt + ctrl + p
-Center: cmd + alt + ctrl + m
+Centre: cmd + alt + ctrl + m
 Left Half: cmd + alt + ctrl + h
 Right Half: cmd + alt + ctrl + l
 Top Half: cmd + alt + ctrl + k
@@ -25,7 +30,7 @@ Bottom Half: cmd + alt + ctrl + j
 
 Ensure > System Preferences > Security you have allowed Spectacle control to your computer
 
-#### Karabiner
+### Karabiner
 
 > General > Change Control_L Key(Left Control) dropdown
 Control_L to Control_L (+ When you type Control_L only, send Escape)
@@ -36,18 +41,18 @@ Set: Delay until repeat: 150, Key repeat: 25
 
 Ensure > System Preferences > Security you have allowed Karabiner control to your computer
 
-#### Seil
+### Seil
 
 Click change caps lock key and set input key code: 59
 
 System Preferences > keyboard > modifier keys
 Change Caps Lock key to "No Action"
 
-#### Source Tree
+### Source Tree
 
 Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
 
-#### iterm2
+### iterm2
 
 > Preferences (cmd + ,) > General
 Untick "Confirm closing multiple sessions"
@@ -59,12 +64,12 @@ Select Reuse previous session's directory
 > Preferences > Profiles > Window > Settings For New windows
 Columns: 250, Rows: 100 - For a full screen terminal window each session
 
-#### Atom
+### Atom
 
 Themes: `seti-ui` and `seti-syntax`
 Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
 
-#### Misc
+### Misc
 
 > System Preferences > Trackpad
 Tick: "Tap to click"
@@ -80,11 +85,11 @@ Hide the dock by right clicking it and selecting:
 
 ## Programs
 
-#### Homebrew
+### Homebrew
 
 Follow instructions here: http://brew.sh
 
-#### Git
+### Git
 
 `brew update`
 
@@ -99,11 +104,11 @@ Cache your git credentials by running:
 
 Note: if you have two factor authentication, your password will be your pa-key
 
-#### Node
+### Node
 
 `brew install node`
 
-#### Postgres
+### Postgres
 
 `brew update`
 
@@ -113,7 +118,7 @@ Start the postgres server: `postgres -D /usr/local/var/postgres`
 
 In a new terminal window run: `psql -d postgres`
 
-#### Redis
+### Redis
 
 `brew update`
 
@@ -125,7 +130,7 @@ In a new terminal window run: `redis-cli`
 
 Now type `ping` and it should respond `pong`
 
-#### Sass
+### Sass
 
 `gem install sass`
 
