@@ -67,7 +67,7 @@ Change Caps Lock key to "No Action"
 
 ### Source Tree
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
+<img src="https://blog.sourcetreeapp.com/files/2014/09/SourceTreeNewIcon-300x300.png" align="right" height="150px" />
 
 Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
 
@@ -93,7 +93,7 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 ### Atom
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
+<img src="https://og.github.com/atom-mark/atom-mark@1200x630.png" align="right" height="150px" />
 
 Themes: `seti-ui` and `seti-syntax`
 
@@ -105,7 +105,7 @@ Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `mar
 
 ### Misc
 
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
+<img src="http://core0.staticworld.net/images/article/2013/10/system-preferences-gallery-100065979-large.png" align="right" height="150px" />
 
 **`> System Preferences > Trackpad`**
 Tick: "Tap to click"
