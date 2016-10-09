@@ -28,24 +28,24 @@ I have configured them away from the default to not override other hotkeys
  - Top Half: cmd + alt + ctrl + k
  - Bottom Half: cmd + alt + ctrl + j
 
-Ensure > System Preferences > Security you have allowed Spectacle control to your computer
+Ensure in **`> System Preferences > Security`** you have allowed Spectacle control to your computer
 
 ### Karabiner
 
-In > General > Change Control_L Key(Left Control) dropdown
+**`> General > Change Control_L Key(Left Control)`** dropdown
 Control_L to Control_L (+ When you type Control_L only, send Escape)
 
-In > Key repeat
+**`> Key repeat`**
 Tick: override the key repeat values of system
 Set: Delay until repeat: 150, Key repeat: 25
 
-Ensure > System Preferences > Security you have allowed Karabiner control to your computer
+Ensure in **`> System Preferences > Security`** you have allowed Karabiner control to your computer
 
 ### Seil
 
 Click change caps lock key and set input key code: 59
 
-In > System Preferences > keyboard > modifier keys
+**`> System Preferences > keyboard > modifier keys`**
 Change Caps Lock key to "No Action"
 
 ### Source Tree
@@ -54,14 +54,14 @@ Follow the instructions to install after downloading from here: https://www.sour
 
 ### iterm2
 
-In > Preferences (cmd + ,) > General
+**`> Preferences (cmd + ,) > General`**
 Untick "Confirm closing multiple sessions"
 Untick "Confirm Quit iTerm2"
 
-In > Preferences > Profiles > General > Working directory
+**`> Preferences > Profiles > General > Working directory`**
 Select Reuse previous session's directory
 
-In > Preferences > Profiles > Window > Settings For New windows
+**`> Preferences > Profiles > Window > Settings For New windows`**
 Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 ### Atom
@@ -72,7 +72,7 @@ Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `mar
 
 ### Misc
 
-In > System Preferences > Trackpad
+**`> System Preferences > Trackpad`**
 Tick: "Tap to click"
 
 To get rid of press and hold character completion, run:
