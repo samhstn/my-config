@@ -99,6 +99,8 @@ Themes: `seti-ui` and `seti-syntax`
 
 Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
 
+<br/><br/><br/><br/>
+
 ----
 
 ### Misc
