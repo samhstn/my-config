@@ -19,7 +19,7 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 
 ### Spectacle
 
-<img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" />
+<img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" height="100px" />
 
 These are the only commands I use
 I have configured them away from the default to not override other hotkeys
