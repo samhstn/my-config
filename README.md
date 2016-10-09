@@ -57,9 +57,13 @@ Change Caps Lock key to "No Action"
 
 ### Source Tree
 
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
+
 Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
 
 ### iterm2
+
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
 
 **`> Preferences (cmd + ,) > General`**
 Untick "Confirm closing multiple sessions"
@@ -73,11 +77,15 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 ### Atom
 
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
+
 Themes: `seti-ui` and `seti-syntax`
 
 Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
 
 ### Misc
+
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" />
 
 **`> System Preferences > Trackpad`**
 Tick: "Tap to click"
