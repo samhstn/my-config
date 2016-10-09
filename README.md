@@ -89,6 +89,8 @@ Select Reuse previous session's directory
 **`> Preferences > Profiles > Window > Settings For New windows`**
 Columns: 250, Rows: 100 - For a full screen terminal window each session
 
+<br/><br/><br/><br/>
+
 ----
 
 ### Atom
@@ -116,6 +118,10 @@ Finder, Chrome, iterm2, SourceTree, Atom and Trash
 
 Hide the dock by right clicking it and selecting:
 "Turn hiding on"
+
+<br/></br>
+
+----
 
 ## Programs
 
