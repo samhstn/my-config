@@ -44,9 +44,13 @@ Ensure in **`> System Preferences > Security`** you have allowed Spectacle contr
 **`> General > Change Control_L Key(Left Control)`** dropdown
 Tick: Control_L to Control_L (+ When you type Control_L only, send Escape)
 
+<img src="imgs/karabiner_ctrl_remap.png" />
+
 **`> Key repeat`**
 Tick: override the key repeat values of system
 Set: Delay until repeat: 150, Key repeat: 25
+
+<img src="imgs/karabiner_key_repeat.png" />
 
 Ensure in **`> System Preferences > Security`** you have allowed Karabiner control to your computer
 
@@ -119,7 +123,7 @@ Finder, Chrome, iterm2, SourceTree, Atom and Trash
 Hide the dock by right clicking it and selecting:
 "Turn hiding on"
 
-<br/></br>
+<img src="imgs/doc_applications.png" />
 
 ----
 
@@ -204,6 +208,6 @@ They can be installed with:
 
 Then set up by adding "sams-aliases" to your plugins
 
-Your terminal should look something like
+Your terminal should look something like this
 
 <img src="imgs/terminal.png" />
