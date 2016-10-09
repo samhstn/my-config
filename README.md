@@ -21,31 +21,31 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 These are the only commands I use
 I have configured them away from the default to not override other hotkeys
 
-Fullscreen: cmd + alt + ctrl + p
-Centre: cmd + alt + ctrl + m
-Left Half: cmd + alt + ctrl + h
-Right Half: cmd + alt + ctrl + l
-Top Half: cmd + alt + ctrl + k
-Bottom Half: cmd + alt + ctrl + j
+ - Fullscreen: cmd + alt + ctrl + p
+ - Centre: cmd + alt + ctrl + m
+ - Left Half: cmd + alt + ctrl + h
+ - Right Half: cmd + alt + ctrl + l
+ - Top Half: cmd + alt + ctrl + k
+ - Bottom Half: cmd + alt + ctrl + j
 
-Ensure > System Preferences > Security you have allowed Spectacle control to your computer
+Ensure in **`> System Preferences > Security`** you have allowed Spectacle control to your computer
 
 ### Karabiner
 
-> General > Change Control_L Key(Left Control) dropdown
-Control_L to Control_L (+ When you type Control_L only, send Escape)
+**`> General > Change Control_L Key(Left Control)`** dropdown
+Tick: Control_L to Control_L (+ When you type Control_L only, send Escape)
 
-> Key repeat
+**`> Key repeat`**
 Tick: override the key repeat values of system
 Set: Delay until repeat: 150, Key repeat: 25
 
-Ensure > System Preferences > Security you have allowed Karabiner control to your computer
+Ensure in **`> System Preferences > Security`** you have allowed Karabiner control to your computer
 
 ### Seil
 
 Click change caps lock key and set input key code: 59
 
-System Preferences > keyboard > modifier keys
+**`> System Preferences > keyboard > modifier keys`**
 Change Caps Lock key to "No Action"
 
 ### Source Tree
@@ -54,24 +54,25 @@ Follow the instructions to install after downloading from here: https://www.sour
 
 ### iterm2
 
-> Preferences (cmd + ,) > General
+**`> Preferences (cmd + ,) > General`**
 Untick "Confirm closing multiple sessions"
 Untick "Confirm Quit iTerm2"
 
-> Preferences > Profiles > General > Working directory
+**`> Preferences > Profiles > General > Working directory`**
 Select Reuse previous session's directory
 
-> Preferences > Profiles > Window > Settings For New windows
+**`> Preferences > Profiles > Window > Settings For New windows`**
 Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 ### Atom
 
 Themes: `seti-ui` and `seti-syntax`
+
 Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
 
 ### Misc
 
-> System Preferences > Trackpad
+**`> System Preferences > Trackpad`**
 Tick: "Tap to click"
 
 To get rid of press and hold character completion, run:
@@ -102,7 +103,7 @@ Cache your git credentials by running:
 `git config --global user.name <yourname>`
 `git config --global user.email <your@email.com>`
 
-Note: if you have two factor authentication, your password will be your pa-key
+_Note:_ if you have two factor authentication, your password will be your pa-key
 
 ### Node
 
@@ -150,7 +151,7 @@ My vim config can be found [here](https://github.com/shouston3/My-Config/blob/ma
 
 I prefer to use the zsh shell with the oh-my-zsh extensions as opposed to the bash shell, see why [here](https://github.com/shouston3/My-Config/blob/master/WHY_ZSH.md)
 
-My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, installed with:
+My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, install with:
 
 `curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-theme.zsh-theme > ~/.oh-my-zsh/themes`
 
@@ -162,4 +163,4 @@ They can be installed with:
 
 `curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-aliases.plugin.zsh > ~/.oh-my-zsh/plugins/sams-aliases.plugin.zsh`
 
-Then set up by adding it to your plugins
+Then set up by adding "sams-aliases" to your plugins
