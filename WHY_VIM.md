@@ -1,6 +1,6 @@
 # Why Vim
 
-Pros:
+### Pros:
 
 Its inbuilt into unix operating systems so you can start immediately
 
@@ -14,7 +14,7 @@ Amazing shortcuts and commands
 
 You will always be learning new ways to speed up your workflow
 
-Cons:
+### Cons:
 
 A modal editor is initially intimidating
 
