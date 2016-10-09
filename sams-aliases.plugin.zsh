@@ -10,21 +10,23 @@ alias cl='clear'
 alias m='vim'
 alias colours='spectrum_ls'
 alias st='open -a SourceTree .'
-alias zga='vim ~/.my-zsh/git-aliases.zsh'
 alias n='npm run'
 alias lll='ls' # for typing ls with one hand
 alias pg='postgres -D /usr/local/var/postgres'
 alias ss='echo "sourcing zshrc"; source ~/.zshrc'
-alias j='jobs'
-alias rt='node_modules/.bin/riot'
 alias ns='npm start'
 alias nt='npm t'
 alias nw='npm run watch'
 alias nsm='n startmon'
-alias rmt='rm *.temp.* && echo "removing all *.temp.* files"'
+alias rmt='rm *.temp.* && echo "removing *.temp.* files"'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias nc='npm run coverage'
 alias ntm='npm run testmon'
+
+# An easier way to git clone
+function gclone() {
+  git clone "https://github.com/$1.git"
+}
 
 # open my zsh aliases file, with -i switch simply display all my aliases and functions
 function za() {
@@ -37,7 +39,7 @@ function za() {
     sed 's/()\ {//g' | # remove brackts
     tail -n +15
   else
-    vim ~/.my-zsh/aliases.zsh
+    vim ~/.oh-my-zsh/plugins/sams-aliases.plugin.zsh
   fi
 }
 
