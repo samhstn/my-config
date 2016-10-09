@@ -18,6 +18,8 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 **Atom** - A easily configurable, beginner friendly text editor which is good for pair programming
 
 ### Spectacle
+
+<img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" />
 These are the only commands I use
 I have configured them away from the default to not override other hotkeys
 
