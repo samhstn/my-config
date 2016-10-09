@@ -20,6 +20,7 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 ### Spectacle
 
 <img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" />
+
 These are the only commands I use
 I have configured them away from the default to not override other hotkeys
 
@@ -46,6 +47,8 @@ Set: Delay until repeat: 150, Key repeat: 25
 Ensure in **`> System Preferences > Security`** you have allowed Karabiner control to your computer
 
 ### Seil
+
+<img src="https://pqrs.org/osx/karabiner/img/seil-icon@2x.png" align="right" />
 
 Click change caps lock key and set input key code: 59
 
