@@ -45,7 +45,7 @@ Change Caps Lock key to "No Action"
 
 #### Source Tree
 
-tbd
+Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
 
 #### iterm2
 
@@ -61,7 +61,8 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 #### Atom
 
-tbd
+Themes: `seti-ui` and `seti-syntax`
+Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
 
 #### Misc
 
@@ -138,5 +139,14 @@ Then run the command again
 
 ## Dot files
 
-tbd
+My vim config can be found [here]() and dowloaded with:
 
+`curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
+
+I prefer to use the zsh shell with the oh-my-zsh extensions as opposed to the bash shell, see why [here]()
+
+My terminal theme can be found [here]() and after you have oh-my-zsh installed, downloaded with:
+
+`tbd`
+
+[Here]() are the functions and aliases I use day to day
