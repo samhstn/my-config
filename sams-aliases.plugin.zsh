@@ -172,3 +172,29 @@ function s() {
     sed 's/"//g'
   fi
 }
+
+function nodeni () {
+  (
+    # wait for 0.1 sec so that .nodeni.txt has been updated by last command
+    sleep 0.1;
+    # set CHROME_URL to be
+    # output of file
+    # grep filter only the line beginning with 4 spaces
+    # -e to allow regex
+    # -a to force read of file (since it is being created by script
+    # it may not be read)
+    # sed to remove all spaces
+    CHROME_URL="$(
+      cat ~/.nodeni.txt |
+      grep -ae '^\ \ \ \ ' |
+      sed 's/ //g'
+    )"
+    # Open chrome
+    # osascript to tell chrome what location to go to
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome &
+    osascript -e "tell application \"Google Chrome\" to open location \""$CHROME_URL"\""
+  ) &
+  # Since node --inspect is not stdout or stderr
+  # we must read the literal terminal output with script -r
+  script -r ~/.nodeni.txt node --inspect=9222 --debug-brk $1
+}
