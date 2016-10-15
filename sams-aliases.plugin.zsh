@@ -32,14 +32,14 @@ function gclone() {
 function za() {
   if [ "$1" = "i" ]
   then
-    cat ~/.oh-my-zsh/plugins/sams-aliases.plugin.zsh |
+    cat ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh |
     egrep '^(alias|function)' | # grab only lines that start with alias or function
     awk '{print substr($0, index($0, $2))}' | # delete the first word
     awk -F'=' '{if($0 ~ /=/) {print $1} else {print $0}}' | # delete all after = in a line with =
     sed 's/()\ {//g' | # remove brackts
     tail -n +15
   else
-    vim ~/.oh-my-zsh/plugins/sams-aliases.plugin.zsh
+    vim ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh
   fi
 }
 
