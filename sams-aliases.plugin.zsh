@@ -21,7 +21,7 @@ alias nsm='n startmon'
 alias rmt='rm *.temp.* && echo "removing *.temp.* files"'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias nc='npm run coverage'
-alias ntm='npm run testmon'
+alias ntm="nodemon -x 'npm t'"
 
 # An easier way to git clone
 function gclone() {
