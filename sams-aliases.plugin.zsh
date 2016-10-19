@@ -190,9 +190,7 @@ function nodeni () {
       grep -ae '^\ \ \ \ ' |
       sed 's/ //g'
     )"
-    # Open chrome
     # osascript to tell chrome what location to go to
-    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome &
     osascript -e "tell application \"Google Chrome\" to open location \""$CHROME_URL"\""
   ) &
   # Since node --inspect is not stdout or stderr
