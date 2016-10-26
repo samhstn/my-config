@@ -77,6 +77,7 @@ function hrm() {
 # grepe is a numbered case insensitive recursive search in current dir
 function grepe() {
   grep -ri $1 . --exclude-dir={node_modules,production,coverage,.git,build,.sass-cache} --exclude=npm-debug.log |
+  egrep -v '/.{120}' |
   awk '{print NR, $0}'
 }
 
