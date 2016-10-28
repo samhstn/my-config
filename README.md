@@ -155,7 +155,7 @@ You should install node with nvm, since then you will have more control over whi
 Install it with:
 
 `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash`
-(taken from [nvm](https://github.com/creationix/nvm)
+(taken from [nvm](https://github.com/creationix/nvm))
 
 Check out the most recent version of node [here](https://nodejs.org/en/) and install it
 
