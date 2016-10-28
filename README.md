@@ -150,7 +150,18 @@ _Note:_ if you have two factor authentication, your password will be your pa-key
 
 ### Node
 
-`brew install node`
+You should install node with nvm, since then you will have more control over which version you are using.
+
+Install it with:
+
+`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash`
+(taken from [nvm](https://github.com/creationix/nvm))
+
+Check out the most recent version of node [here](https://nodejs.org/en/) and install it
+
+For me it was:
+
+`nvm install 6.9`
 
 ### Postgres
 
