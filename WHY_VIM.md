@@ -4,7 +4,7 @@
 
  - Its inbuilt into unix operating systems so you can start immediately
 
- - Its super responsive and will load files faster than any other text editor
+ - Its super responsive and will load files faster than any other text editor (nearly every other text editor - less loads files faster, see `man less` for more info)
 
  - Using vim will speed up your typing
 
