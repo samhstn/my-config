@@ -9,14 +9,17 @@ set autoindent
 syntax enable 
 set background=dark
 set clipboard=unnamed
-set wildmenu "Better tab completion when looking for files in command mode
-set noerrorbells "Quiet the bell
+set wildmenu " Better tab completion when looking for files in command mode
+set noerrorbells " Quiet the bell
 set history=500 " set how many lines vim has to remember
 set foldcolumn=1 " Extra margin to the left
 
-set tabstop=2 "show existing tab with 2 spaces width
+set tabstop=2 " show existing tab with 2 spaces width
 set shiftwidth=2 " when indenting with '>', use 2 spaces width
 set expandtab " On pressing tab, insert 2 spaces
+
+" Jumps to word as you type
+set incsearch
 
 " Ridding of swp files
 set nobackup
@@ -30,8 +33,15 @@ nnoremap D d$
 nnoremap Y y$
 nnoremap , ;
 command Vrc e~/.vimrc
+" create a file if file doesn't exist in gf path
+nnoremap gF :view
+let mapleader = "\<space>"
 
-"Eatchar function described in vimhelp
+" Copy visually selected text to system clipboard
+vnoremap <leader>y :w !pbcopy<CR><CR>
+nnoremap <leader>w :w<CR>
+
+" Eatchar function described in vimhelp
 func! Eatchar(pat)
   let c = nr2char(getchar(0))
   return (c =~ a:pat) ? '' : c
@@ -43,4 +53,5 @@ iab <silent> clog console.log();<esc>hi<c-r>=Eatchar('\s')<cr>
 " Move visually selected line text up, down, left and right
 vnoremap <c-j> xPmqgvdmz'qPjV'zk
 vnoremap <c-k> xPmqgv<esc>mz'qkdd'zPkV'q
+
 syntax on
