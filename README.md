@@ -163,6 +163,10 @@ For me it was:
 
 `nvm install 6.9`
 
+Note: the two shell command lines nvm will append to your `.zshrc` will slow down your terminal startup quite considerably.
+
+After installation, I commented these out.
+
 ### Postgres
 
 `brew update`
