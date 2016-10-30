@@ -163,9 +163,18 @@ For me it was:
 
 `nvm install 6.9`
 
-Note: the two shell command lines nvm will append to your `.zshrc` will slow down your terminal startup quite considerably.
+Note: the two shell command lines nvm will append to your `.zshrc` will slow down your terminal startup quite considerably, so...
 
-After installation, I commented these out.
+After installation, I commented these appended lines out and replaced it with:
+
+```
+if [[ ":$PATH:" != *"$HOME/.nvm/versions/node/v6.9.1/bin"* ]]; then
+  PATH=$PATH:$HOME/.nvm/versions/node/v6.9.1/bin/
+fi
+```
+As I don't care for changing my node version too regularly and I don't to be slowed down by sourcing the whole nvm script each time I open a new terminal instance.
+
+I instead extend my path to contain the `node` and `npm` binary files installed by nvm, much faster :)
 
 ### Postgres
 
