@@ -13,7 +13,7 @@ Add the [Vimium Chrome Extension](https://vimium.github.io/)
 
 **Source Tree** - For better git visualization and management
 
-**iterm2** - For more control in with your terminal setup
+**iterm2** - For a better terminal
 
 **Atom** - A easily configurable, beginner friendly text editor which is great for pair programming
 
