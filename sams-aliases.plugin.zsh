@@ -46,7 +46,7 @@ function h() {
 # grepe is a numbered case insensitive recursive search in current dir
 function grepe() {
   grep -ri $1 . |
-  egrep -v '/.{120}' |
+  egrep -v '/.{120}/' |
   awk '{print NR, $0}'
 }
 
@@ -59,7 +59,7 @@ function vo() {
   tail -n -1 |
   awk '{print substr($0, index($0, $3))}' | # take the grepe argument from history
   xargs -J % grep -ri % . |
-  egrep -v '/.{120}' |
+  egrep -v '/.{120}/' |
   head -n $arg |
   tail -n -1 |
   awk -F':' '{print $1}' | # only include text until :
