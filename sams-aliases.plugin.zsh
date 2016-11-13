@@ -95,25 +95,48 @@ function cdl() {
 }
 
 function nodeni () {
-  (
-    # wait for 0.1 sec so that .nodeni.txt has been updated by last command
-    sleep 0.1;
-    # set CHROME_URL to be
-    # output of file
-    # grep filter only the line beginning with 4 spaces
-    # -e to allow regex
-    # -a to force read of file (since it is being created by script
-    # it may not be read)
-    # sed to remove all spaces
-    CHROME_URL="$(
-      cat ~/.nodeni.txt |
-      grep -ae '^\ \ \ \ ' |
-      sed 's/ //g'
-    )"
-    # osascript to tell chrome what location to go to
-    osascript -e "tell application \"Google Chrome\" to open location \""$CHROME_URL"\""
-  ) &
-  # Since node --inspect is not stdout or stderr
-  # we must read the literal terminal output with script -r
-  script -r ~/.nodeni.txt node --inspect=9222 --debug-brk $1
+  if [ $# -eq 0 ] || [ $1 = "-h" ]; then
+    if [ $# -eq 0 ]; then
+      echo 'Please supply an argument, see: nodeni -h for help'
+    else
+      echo 'Help for nodeni'
+      echo
+      echo 'Usage:  $ nodeni [ path/to/file.js | -b path/to/file.js | -h ]'
+      echo
+      echo 'Options:'
+      echo
+      echo 'default     Run node --inspect and open the url in chrome'
+      echo '-b, -brk    Run default and break on first line of code'
+      echo '-h          Show nodeni help'
+      echo
+    fi
+  else
+    (
+      # wait for 0.1 sec so that .nodeni.txt has been updated by last command
+      sleep 0.1;
+      # set CHROME_URL to be
+      # output of file
+      # grep filter only the line beginning with 4 spaces
+      # -e to allow regex
+      # -a to force read of file (since it is being created by script
+      # it may not be read)
+      # sed to remove all spaces
+      CHROME_URL="$(
+        cat ~/.nodeni.txt |
+        grep -ae '^\ \ \ \ ' |
+        sed 's/ //g'
+      )"
+      # osascript to tell chrome what location to go to
+      osascript -e "tell application \"Google Chrome\" to open location \""$CHROME_URL"\""
+    ) &
+    # Since node --inspect is not stdout or stderr
+    # we must read the literal terminal output with script -r
+
+    if [ $1 = "-b" ] || [ $1 = "-brk" ]
+    then
+      script -r ~/.nodeni.txt node --inspect=9222 --debug-brk $2
+    else
+      script -r ~/.nodeni.txt node --inspect=9222 $1
+    fi
+  fi
 }
