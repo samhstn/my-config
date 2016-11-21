@@ -24,6 +24,8 @@ alias nc='npm run coverage'
 alias ntm="nodemon -x 'npm t'"
 alias opencoverage='open coverage/lcov-report/index.html'
 alias za='vim ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh'
+alias ric='cd ~/proj/crm-base-generic/'
+alias le='cd ~/proj/le'
 
 # An easier way to git clone
 function gclone() {
@@ -92,6 +94,24 @@ function cdl() {
   awk '{print substr($0, index($0, $2))}' |
   awk '{print $2}')"
   cd $cdpath
+}
+
+# s shows all the sripts in a package.json, s i shows the scripts and their definition
+function s() {
+  if [ "$1" = "i" ]
+  then
+    cat ./package.json |
+    awk 'BEGIN{found=0} /"scripts":/{found=1} {if (found) print }' |
+    tail -n +2 | # remove the '"scripts": {' line
+    awk 'BEGIN{found=1} /\},/{found=0} {if (found) print }'
+  else
+    cat ./package.json |
+    awk 'BEGIN{found=0} /"scripts":/{found=1} {if (found) print }' |
+    tail -n +2 | # remove the '"scripts": {' line
+    awk 'BEGIN{found=1} /\},/{found=0} {if (found) print }' |
+    awk -F'":' '{print $1}' |
+    sed 's/"//g'
+  fi
 }
 
 function nodeni () {
