@@ -17,7 +17,7 @@ alias ss='echo "sourcing zshrc"; source ~/.zshrc'
 alias ns='npm start'
 alias nt='npm t'
 alias nw='npm run watch'
-alias nsm='n startmon'
+alias nsm='nodemon -x "npm start"'
 alias rmt='rm *.temp.* && echo "removing *.temp.* files"'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias nc='npm run coverage'
@@ -26,6 +26,7 @@ alias opencoverage='open coverage/lcov-report/index.html'
 alias za='vim ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh'
 alias ric='cd ~/proj/crm-base-generic/'
 alias le='cd ~/proj/le'
+alias doc='cd ~/Documents'
 
 # An easier way to git clone
 function gclone() {
@@ -48,7 +49,7 @@ function h() {
 # grepe is a numbered case insensitive recursive search in current dir
 function grepe() {
   grep -ri --exclude-dir=node_modules $1 . |
-  egrep -v '/.{120}' |
+  egrep -v '/.{120}/' |
   awk '{print NR, $0}'
 }
 
@@ -61,7 +62,7 @@ function vo() {
   tail -n -1 |
   awk '{print substr($0, index($0, $3))}' | # take the grepe argument from history
   xargs -J % grep -ri --exclude-dir=node_modules % . |
-  egrep -v '/.{120}' |
+  egrep -v '/.{120}/' |
   head -n $arg |
   tail -n -1 |
   awk -F':' '{print $1}' | # only include text until :
