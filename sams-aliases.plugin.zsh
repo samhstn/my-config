@@ -33,19 +33,6 @@ function gclone() {
   git clone "https://github.com/$1.git"
 }
 
-# lists off last 20 commands from history or if an arg is passed finds prev examples of those
-function h() {
-  if [ $# -eq 0 ]
-  then
-    history | tail -20
-  else
-    cat ~/.zsh_history |
-    awk -F';' '{print $2}' |
-    awk '{print NR, $0}' |
-    GREP_COLOR="1;36" grep $1
-  fi
-}
-
 # grepe is a numbered case insensitive recursive search in current dir
 function grepe() {
   grep -ri --exclude-dir=node_modules $1 . |
