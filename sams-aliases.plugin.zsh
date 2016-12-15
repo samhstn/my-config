@@ -16,14 +16,17 @@ alias ss='echo "sourcing zshrc"; source ~/.zshrc'
 alias ns='npm start'
 alias nt='npm t'
 alias nw='npm run watch'
-alias nsm='nodemon -x "npm start"'
+alias nsm='nodemon -e js,json,html,css -x "npm start"'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias nc='npm run coverage'
 alias ntm="nodemon -x 'npm t'"
 alias opencoverage='open coverage/lcov-report/index.html'
 alias za='vim ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh'
 alias ric='cd ~/proj/crm-base-generic/'
-alias le='cd ~/proj/le && ls'
+alias le='cd ~/proj/le'
+alias lang='cd ~/proj/lang'
+alias doc='cd ~/Documents'
+alias down='cd ~/Downloads'
 
 # An easier way to git clone
 function gclone() {
