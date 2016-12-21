@@ -1,6 +1,6 @@
 alias desk='cd ~/Desktop && ls'
 alias doc='cd ~/Documents && ls'
-alias down='cd ~/Downloads'
+alias down='cd ~/Downloads && ls'
 alias proj='cd ~/proj && ls'
 alias prj='cd ~/proj && ls'
 alias zrc='vim ~/.zshrc'
@@ -26,6 +26,12 @@ alias za='vim ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh'
 alias ric='cd ~/proj/crm-base-generic/'
 alias le='cd ~/proj/le'
 alias lang='cd ~/proj/lang'
+alias gito='cd ~/proj/gitodoro'
+alias gitod='cd ~/proj/gitodoro'
+alias gitodo='cd ~/proj/gitodoro'
+alias gitodor='cd ~/proj/gitodoro'
+alias gitodoro='cd ~/proj/gitodoro'
+alias mc='cd ~/proj/my-config'
 
 # An easier way to git clone
 function gclone() {
