@@ -6,40 +6,37 @@ set autoread
 set ignorecase
 set smartcase
 set autoindent
-syntax enable 
-set background=dark
 set clipboard=unnamed
 set wildmenu " Better tab completion when looking for files in command mode
-set noerrorbells " Quiet the bell
-set history=500 " set how many lines vim has to remember
+set noerrorbells
+set history=500
 set foldcolumn=1 " Extra margin to the left
+set nobackup " Ridding of swp files
+set nowritebackup " ^
+set noswapfile " ^
+syntax enable 
+syntax on
 
-set tabstop=2 " show existing tab with 2 spaces width
-set shiftwidth=2 " when indenting with '>', use 2 spaces width
-set expandtab " On pressing tab, insert 2 spaces
+let mapleader = "\<space>"
+let tab_spacing = 2 " I default to using a 2 tab indent
+
+let &tabstop = tab_spacing " tab key inserts 2 spaces
+let &shiftwidth = tab_spacing " < and > move text by 2 spaces
+set expandtab " On pressing tab, insert spaces not tabs
 
 " Jumps to word as you type
 set incsearch
 
-" Ridding of swp files
-set nobackup
-set nowritebackup
-set noswapfile
-
 " key remappings
 nmap ; :
+vmap ; :
 cmap Q q!
 nnoremap D d$
 nnoremap Y y$
 nnoremap , ;
-command Vrc e~/.vimrc
-" create a file if file doesn't exist in gf path
-nnoremap gF :view
-let mapleader = "\<space>"
-
-" Copy visually selected text to system clipboard
-vnoremap <leader>y :w !pbcopy<CR><CR>
-nnoremap <leader>w :w<CR>
+vnoremap , ;
+nnoremap > >>
+nnoremap < <<
 
 " Eatchar function described in vimhelp
 func! Eatchar(pat)
@@ -50,8 +47,18 @@ endfunc
 " keystroke shortcut: type: 'clog<tab>' to type console.log
 iab <silent> clog console.log();<esc>hi<c-r>=Eatchar('\s')<cr>
 
-" Move visually selected line text up, down, left and right
-vnoremap <c-j> xPmqgvdmz'qPjV'zk
-vnoremap <c-k> xPmqgv<esc>mz'qkdd'zPkV'q
+func! SetTabs(tablength)
+  echo "Tab set to " . a:tablength
+  let &l:tabstop = a:tablength
+  let &l:shiftwidth = a:tablength
+endfunc
 
-syntax on
+" Change tab spacing to 2 or 4
+nnoremap <leader>4 :call SetTabs(4)<cr>
+nnoremap <leader>2 :call SetTabs(2)<cr>
+" Copy visually selected lines to system clipboard
+vnoremap <leader>y :w !pbcopy<CR><CR>
+" Shortcuts for ':set paste' and ':set nopaste'
+nnoremap <leader>p :set paste<CR>
+nnoremap <leader>n :set nopaste<CR>
+
