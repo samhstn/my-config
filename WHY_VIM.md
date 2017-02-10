@@ -1,7 +1,7 @@
 # Why Vim
 
 Vim is not for everyone, but if your looking to speed up your workflow longterm and enjoy learning new things.
-I would consider learning it even if you don't use it as your primary text editor (or ide).
+I would consider learning it even if you don't use it as your primary text editor (or IDE).
 
 ## Pros and Cons for using vim as your primary text editor
 
@@ -22,6 +22,8 @@ I would consider learning it even if you don't use it as your primary text edito
  - You will start to discover vim shortcuts built into all kinds of things
  
  - It puts you into a good mindset for improving your workflow
+ 
+ - Using vim trains you to navigate in your editor/filesystem using your keyboard instead of a mouse. This allows you _considerably_ speed up your workflow.
 
 #### Cons:
 
@@ -38,9 +40,21 @@ I would consider learning it even if you don't use it as your primary text edito
 
 _But_ To the cons I say: **Short term pain is worth long term gain.**
 
+----
+
 ## But I like feature x which my text editor offers me which vim doesn't
 
-Yes out of the box a lot of editors offer features which vim doesn't, but most features which I have seen offered by other text editors are actually available in vim as plugins. (Common complaints are the [file tree on the left](https://github.com/scrooloose/nerdtree) and colors).
+<img src="http://vijayanant.github.io/assets/my_vim_setup.png" align="right" height="220px" />
+
+Yes out of the box a lot of editors offer features which vim doesn't, but most features which I have seen offered by other text editors are actually available in vim as plugins.
+
+(Common complaints are colors and the [file tree on the left](https://github.com/scrooloose/nerdtree) - which you can also make clickable if you'd like).
+
+Check out a vim setup on the right to see how vim could look when customised.
+
+<br><br>
+
+----
 
 ## I've tried vim and I didn't like it...
 
@@ -49,13 +63,17 @@ You have to be aware that it will take a while to learn the shortcuts, the muscl
 Some people also don't put in enough effort in continuously improving the way they work.
 If you don't look at making your workflow faster and looking at new ways of doing things (either by researching it yourself or by pairing with someone who will teach you), then you won't be able to see the benefits that vim has to offer.
 
+----
+
 ## Thoughts on vim plugins
 
 I think people look to use vim plugins way too early so that they can get back to the familiarity of the mindset they had with their previous text editors instead of adopting the vim mindset.
 
-I would recommend starting with as few plugins as possible and then slowly adding as few of them as possible and only the ones you need.
+I would recommend starting with as few plugins as possible (none actually) and then slowly adding as few of them as possible and only the ones you need (I'm currently not using any because I havn't experienced any nucences which vanilla vim and my terminal can't address).
 
 I feel that when you add a considerable amount of plugins you will hinder your vim learning and your long term workflow.
+
+----
 
 ## So how long will it take to start to see the benefits of vim over my current text editor?
 
