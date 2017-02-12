@@ -18,7 +18,6 @@ set expandtab " On pressing tab, insert spaces not tabs
 " key remappings
 nmap ; :
 vmap ; :
-cmap Q q!
 nnoremap D d$
 nnoremap Y y$
 nnoremap , ;
@@ -45,8 +44,9 @@ endfunc
 nnoremap <leader>4 :call SetTabs(4)<cr>
 nnoremap <leader>2 :call SetTabs(2)<cr>
 " Copy visually selected lines to system clipboard
-vnoremap <leader>y :w !pbcopy<CR><CR>
+vnoremap <leader>y :w !pbcopy<cr><cr>
 " Shortcuts for ':set paste' and ':set nopaste'
-nnoremap <leader>p :set paste<CR>
-nnoremap <leader>n :set nopaste<CR>
+nnoremap <leader>p :set paste<cr>
+nnoremap <leader>n :set nopaste<cr>
+nnoremap <leader>q :q!<cr>
 
