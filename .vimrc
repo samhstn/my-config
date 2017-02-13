@@ -1,57 +1,52 @@
 " should be default configs
-set nocompatible
-set ttyfast
-set number
-set autoread
-set ignorecase
-set smartcase
-set autoindent
-syntax enable 
-set background=dark
-set clipboard=unnamed
-set wildmenu " Better tab completion when looking for files in command mode
-set noerrorbells " Quiet the bell
-set history=500 " set how many lines vim has to remember
+set nocompatible ttyfast number autoread ignorecase smartcase autoindent wildmenu noerrorbells
+set clipboard=unnamed history=500
 set foldcolumn=1 " Extra margin to the left
+set nobackup nowritebackup noswapfile " Ridding of swp files
+set incsearch " Jumps to word as you type
 
-set tabstop=2 " show existing tab with 2 spaces width
-set shiftwidth=2 " when indenting with '>', use 2 spaces width
-set expandtab " On pressing tab, insert 2 spaces
+syntax enable 
+syntax on
 
-" Jumps to word as you type
-set incsearch
+let mapleader="\<space>"
+let tab_spacing=2 " I default to using a 2 tab indent
 
-" Ridding of swp files
-set nobackup
-set nowritebackup
-set noswapfile
+let &tabstop=tab_spacing " tab key inserts 2 spaces
+let &shiftwidth=tab_spacing " < and > move text by 2 spaces
+set expandtab " On pressing tab, insert spaces not tabs
 
 " key remappings
 nmap ; :
-cmap Q q!
+vmap ; :
 nnoremap D d$
 nnoremap Y y$
 nnoremap , ;
-command Vrc e~/.vimrc
-" create a file if file doesn't exist in gf path
-nnoremap gF :view
-let mapleader = "\<space>"
-
-" Copy visually selected text to system clipboard
-vnoremap <leader>y :w !pbcopy<CR><CR>
-nnoremap <leader>w :w<CR>
+vnoremap , ;
+nnoremap > >>
+nnoremap < <<
 
 " Eatchar function described in vimhelp
 func! Eatchar(pat)
-  let c = nr2char(getchar(0))
-  return (c =~ a:pat) ? '' : c
+  let c=nr2char(getchar(0))
+  return (c=~a:pat) ? '' : c
 endfunc
 
 " keystroke shortcut: type: 'clog<tab>' to type console.log
 iab <silent> clog console.log();<esc>hi<c-r>=Eatchar('\s')<cr>
 
-" Move visually selected line text up, down, left and right
-vnoremap <c-j> xPmqgvdmz'qPjV'zk
-vnoremap <c-k> xPmqgv<esc>mz'qkdd'zPkV'q
+func! SetTabs(tablength)
+  echo "Tab set to ".a:tablength
+  let &l:tabstop=a:tablength
+  let &l:shiftwidth=a:tablength
+endfunc
 
-syntax on
+" Change tab spacing to 2 or 4
+nnoremap <leader>4 :call SetTabs(4)<cr>
+nnoremap <leader>2 :call SetTabs(2)<cr>
+" Copy visually selected lines to system clipboard
+vnoremap <leader>y :w !pbcopy<cr><cr>
+" Shortcuts for ':set paste' and ':set nopaste'
+nnoremap <leader>p :set paste<cr>
+nnoremap <leader>n :set nopaste<cr>
+nnoremap <leader>q :q!<cr>
+
