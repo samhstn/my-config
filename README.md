@@ -216,7 +216,7 @@ My vim config can be found [here](https://github.com/shouston3/My-Config/blob/ma
 
 `curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
 
-I prefer to use the zsh shell with the oh-my-zsh extensions as opposed to the bash shell, see why [here](https://github.com/shouston3/My-Config/blob/master/WHY_ZSH.md)
+My shell preference is the zsh shell with the oh-my-zsh extensions, see why [here](https://github.com/shouston3/My-Config/blob/master/WHY_ZSH.md)
 
 My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, install with:
 
@@ -224,17 +224,23 @@ My terminal theme can be found [here](https://github.com/shouston3/My-Config/blo
 
 Then set up by changing `ZSH_THEME="robbyrussel"` to `ZSH_THEME="sams-theme"`
 
+Your terminal should look something like this:
+
+<img src="imgs/terminal.png" />
+
 [Here](https://github.com/shouston3/My-Config/blob/master/sams-aliases.plugin.zsh) are the functions and aliases I use day to day
 
 They can be installed with:
 
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-aliases.plugin.zsh > ~/.oh-my-zsh/plugins/sams-aliases.plugin.zsh`
+`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-aliases.plugin.zsh > ~/.oh-my-zsh/plugins`
 
 Then set up by adding "sams-aliases" to your zsh plugins
 
-Your terminal should look something like this
+I use the following plugin setup for `oh-my-zsh`:
 
-<img src="imgs/terminal.png" />
+```bash
+plugins=(git sams-aliases vi-mode)
+```
 
 Now your set up with exactly my configuration!
 
