@@ -4,39 +4,41 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 ## Applications to download
 
-[**Googe Chrome**](https://www.google.com/chrome/index.html) - My browser choice
+[**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
 
-[**Karabiner-Elements**](https://github.com/tekezo/Karabiner-Elements) - For key remappings
+[**Karabiner-Elements**](https://github.com/shouston3/My-Config/tree/master#karabiner-elements) - For key remappings
 
-[**Spectacle**](https://www.spectacleapp.com/) - For quick setting of application window sizes
+[**Spectacle**](https://github.com/shouston3/My-Config/tree/master#spectacle) - For quick setting of application window sizes
 
-[**Iterm2**](https://www.iterm2.com/) - For a better terminal
+[**Iterm2**](https://github.com/shouston3/My-Config/tree/master#iterm2) - For a better terminal
 
 ## Programs to install
 
-[**Zsh**]() - Modern shell backed by an [excellent community]()
+[**Zsh**](https://github.com/shouston3/My-Config/tree/master#zsh) - Modern shell backed by an [excellent community]()
 
-[**Vim**]()
+[**Vim**](https://github.com/shouston3/My-Config/tree/master#vim)
 
-[**Homebrew**]() - OSX package manager
+[**Homebrew**](https://github.com/shouston3/My-Config/tree/master#homebrew) - OSX package manager
 
-[**Git**]()
+[**Git**](https://github.com/shouston3/My-Config/tree/master#git)
 
-[**Sass**]()
+[**Sass**](https://github.com/shouston3/My-Config/tree/master#sass)
 
-[**Node**]()
+[**Node**](https://github.com/shouston3/My-Config/tree/master#node)
 
-[**Elixir**]()
+[**Elixir**](https://github.com/shouston3/My-Config/tree/master#elixir)
 
-[**Python**]()
+[**Python**](https://github.com/shouston3/My-Config/tree/master#python)
 
-[**Postgres**]()
+[**Postgres**](https://github.com/shouston3/My-Config/tree/master#postgres)
 
-[**Redis**]()
+[**Redis**](https://github.com/shouston3/My-Config/tree/master#redis)
 
-[**Heroku toolbelt**]()
+[**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
 
 ## Misc
+
+[**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
 
 ----
 
