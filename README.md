@@ -4,45 +4,93 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 ## Applications to download
 
-[**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
++ [**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
 
-[**Karabiner-Elements**](https://github.com/shouston3/My-Config/tree/master#karabiner-elements) - For key remappings
++ [**Karabiner-Elements**](https://github.com/shouston3/My-Config/tree/master#karabiner-elements) - For key remappings
 
-[**Spectacle**](https://github.com/shouston3/My-Config/tree/master#spectacle) - For quick setting of application window sizes
++ [**Spectacle**](https://github.com/shouston3/My-Config/tree/master#spectacle) - For quick setting of application window sizes
 
-[**Iterm2**](https://github.com/shouston3/My-Config/tree/master#iterm2) - For a better terminal
++ [**Iterm2**](https://github.com/shouston3/My-Config/tree/master#iterm2) - For a better terminal
 
 ## Programs to install
 
-[**Zsh**](https://github.com/shouston3/My-Config/tree/master#zsh) - Modern shell backed by an [excellent community]()
++ [**Zsh**](https://github.com/shouston3/My-Config/tree/master#zsh)
 
-[**Vim**](https://github.com/shouston3/My-Config/tree/master#vim)
++ [**Vim**](https://github.com/shouston3/My-Config/tree/master#vim)
 
-[**Homebrew**](https://github.com/shouston3/My-Config/tree/master#homebrew) - OSX package manager
++ [**Homebrew**](https://github.com/shouston3/My-Config/tree/master#homebrew)
 
-[**Git**](https://github.com/shouston3/My-Config/tree/master#git)
++ [**Git**](https://github.com/shouston3/My-Config/tree/master#git)
 
-[**Sass**](https://github.com/shouston3/My-Config/tree/master#sass)
++ [**Sass**](https://github.com/shouston3/My-Config/tree/master#sass)
 
-[**Node**](https://github.com/shouston3/My-Config/tree/master#node)
++ [**Node**](https://github.com/shouston3/My-Config/tree/master#node)
 
-[**Elixir**](https://github.com/shouston3/My-Config/tree/master#elixir)
++ [**Elixir**](https://github.com/shouston3/My-Config/tree/master#elixir)
 
-[**Python**](https://github.com/shouston3/My-Config/tree/master#python)
++ [**Python**](https://github.com/shouston3/My-Config/tree/master#python)
 
-[**Postgres**](https://github.com/shouston3/My-Config/tree/master#postgres)
++ [**Postgres**](https://github.com/shouston3/My-Config/tree/master#postgres)
 
-[**Redis**](https://github.com/shouston3/My-Config/tree/master#redis)
++ [**Redis**](https://github.com/shouston3/My-Config/tree/master#redis)
 
-[**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
++ [**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
 
 ## Misc
 
-[**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
++ [**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
 
 ----
 
 #### Googe Chrome
+
+**`Settings > Preferences > Theme > Dark`**
+
+**Extensions**:
+
+<img src="https://raw.githubusercontent.com/philc/vimium/master/icons/icon128.png" align="right" height="80" />
+
++ [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) - Allows for browsing the web without leaving your keyboard
+
+<br><br>
+
+<img src="http://core0.staticworld.net/images/article/2013/03/splash-100030679-large.jpg" align="right" height="80" />
+
++ [Lastpass](https://www.lastpass.com/) - For managing all your passwords
+
+<br><br>
+
+<img src="http://www.yournerdybestfriend.com/wp-content/uploads/2013/07/color-picker-icon_final.jpg" align="right" height="80" />
+
++ [Colorzilla](http://www.colorzilla.com/) - For picking colours from your browser
+
+<br><br>
+
+<img src="https://getadblock.com/images/adblock_logo_stripe_test.png" align="right" height="80" />
+
++ [Adblock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) - Because I don't like seeing adverts
+
+<br><br>
+
+<img src="https://github.com/maximelebreton/quick-javascript-switcher/raw/master/src/icons/icon-48.png" align="right" height="80" />
+
++ [Quick Javascript Switcher](https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje) - I like to turn this off and on
+
+<br><br>
+
+----
+
+#### Karabiner-Elements
+
+<img src="https://dl2.macupdate.com/images/icons256/25141.png" align="right" height="150px" />
+
+The only feature I use is remapping my `Caps-Lock` key to `Esc` when tapped and to `Ctrl` when held
+
+To get this do the following:
+
++ Follow the setup instructions in [this comment](https://github.com/tekezo/Karabiner-Elements/pull/247#issue-181304263) and download the latest release [here](https://github.com/wwwjfy/Karabiner-Elements/releases)
++ Add the configuration in that comment to `~/.config/karabiner/karabiner.json`
++ Restart karabiner-elements and it should be working
 
 ----
 
@@ -64,15 +112,25 @@ Ensure in **`> System Preferences > Security`** you have allowed Spectacle contr
 
 ----
 
-#### Karabiner-Elements
-
-----
-
 #### Iterm2
+
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
+
+**`> Preferences (cmd + ,) > General`**
+Untick "Confirm closing multiple sessions"
+Untick "Confirm Quit iTerm2"
+
+**`> Preferences > Profiles > General > Working directory`**
+Select Reuse previous session's directory
+
+**`> Preferences > Profiles > Window > Settings For New windows`**
+Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 ----
 
 #### Zsh
+
+The modern shell supported by an [awesome community](http://ohmyz.sh/)
 
 My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, install with:
 
@@ -81,8 +139,6 @@ My terminal theme can be found [here](https://github.com/shouston3/My-Config/blo
 Then set up by changing `ZSH_THEME="robbyrussel"` to `ZSH_THEME="sams-theme"`
 
 Your terminal should look something like this:
-
-<img src="imgs/terminal.png" />
 
 [Here](https://github.com/shouston3/My-Config/blob/master/sams-aliases.plugin.zsh) are the functions and aliases I use day to day
 
@@ -106,19 +162,27 @@ My vim config can be found [here](https://github.com/shouston3/My-Config/blob/ma
 
 `curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
 
+I'm currently using version 7.4 and don't use macvim (this may change soon)
+
 ----
 
 #### Homebrew
 
 Follow instructions here: http://brew.sh
 
+This is what I ran:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 ----
 
 #### Git
 
-`brew update`
-
-`brew install git`
+```bash
+brew install git
+```
 
 Cache your git credentials by running:
 
@@ -135,9 +199,7 @@ _Note:_ if you have two factor authentication, your password will be your pa-key
 
 `gem install sass`
 
-If you get a permissions error, DONT SUDO!
-
-Instead change ownership of that directory
+If you get a permissions error, change ownership of that directory
 
 `sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
 
@@ -166,9 +228,23 @@ nvm install 6.9`
 
 #### Elixir
 
+As simple as:
+
+```bash
+brew install elixir
+```
+
 ----
 
 #### Python
+
+Although mac comes with `python`, we don't have `pip` and other python related tools
+
+Get these by running:
+
+```bash
+brew install python
+```
 
 ----
 
@@ -187,7 +263,6 @@ In a new terminal window run: `psql`
 ----
 
 #### Redis
-`brew update`
 
 `brew install redis`
 
@@ -201,19 +276,32 @@ Now type `ping` and it should respond `pong`
 
 #### Heroku toolbelt
 
+As simple as
+
+```bash
+brew install heroku
+```
 
 #### Misc
 
 <img src="http://core0.staticworld.net/images/article/2013/10/system-preferences-gallery-100065979-large.png" align="right" height="150px" />
 
-**`> System Preferences > Trackpad`**
-Tick: "Tap to click"
+`> System Preferences > Trackpad`
+
+Tick: `Tap to click`
 
 To get rid of press and hold character completion, run:
-`defaults write -g ApplePressAndHoldEnabled -bool false`
 
-Hide the dock by right clicking it and selecting:
-"Turn hiding on"
+```bash
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+Hide the dock by right clicking it and selecting: `Turn hiding on`
+
+My key repeat settings found in `System Preferences > Keyboard` are:
+
++ Key Repeat: `fast`est
++ Delay Until Repeat: `Short`est
 
 ----
 
