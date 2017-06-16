@@ -1,25 +1,50 @@
 # My OSX Configuration
 
-## Chrome
-Install Chrome and set it as the default browser
-Add the [Vimium Chrome Extension](https://vimium.github.io/)
+This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 ## Applications to download
-**Spectacle** - For quick setting of your application window sizes
 
-**Karabiner** - Faster key repeat and key remapping
+[**Googe Chrome**](https://www.google.com/chrome/index.html) - My browser choice
 
-**Seil** - For remapping the caps lock key
+[**Karabiner-Elements**](https://github.com/tekezo/Karabiner-Elements) - For key remappings
 
-**Source Tree** - For better git visualization and management
+[**Spectacle**](https://www.spectacleapp.com/) - For quick setting of application window sizes
 
-**iterm2** - For a better terminal
+[**Iterm2**](https://www.iterm2.com/) - For a better terminal
 
-**Atom** - A easily configurable, beginner friendly text editor which is great for pair programming
+## Programs to install
+
+[**Zsh**]() - Modern shell backed by an [excellent community]()
+
+[**Vim**]()
+
+[**Homebrew**]() - OSX package manager
+
+[**Git**]()
+
+[**Sass**]()
+
+[**Node**]()
+
+[**Elixir**]()
+
+[**Python**]()
+
+[**Postgres**]()
+
+[**Redis**]()
+
+[**Heroku toolbelt**]()
+
+## Misc
 
 ----
 
-### Spectacle
+#### Googe Chrome
+
+----
+
+#### Spectacle
 
 <img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" height="150px" />
 
@@ -37,186 +62,15 @@ Ensure in **`> System Preferences > Security`** you have allowed Spectacle contr
 
 ----
 
-### Karabiner
-
-<img src="https://dl2.macupdate.com/images/icons256/25141.png" align="right" height="150px" />
-
-**`> General > Change Control_L Key(Left Control)`** dropdown
-Tick: Control_L to Control_L (+ When you type Control_L only, send Escape)
-
-<img src="imgs/karabiner_ctrl_remap.png" />
-
-**`> Key repeat`**
-Tick: override the key repeat values of system
-Set: Delay until repeat: 150, Key repeat: 25
-
-<img src="imgs/karabiner_key_repeat.png" />
-
-Ensure in **`> System Preferences > Security`** you have allowed Karabiner control to your computer
+#### Karabiner-Elements
 
 ----
 
-### Seil
-
-<img src="https://pqrs.org/osx/karabiner/img/seil-icon@2x.png" align="right" height="150px" />
-
-Click change caps lock key and set input key code: 59
-
-**`> System Preferences > keyboard > modifier keys`**
-Change Caps Lock key to "No Action"
-
-<br/><br/><br/><br/>
+#### Iterm2
 
 ----
 
-### Source Tree
-
-<img src="https://blog.sourcetreeapp.com/files/2014/09/SourceTreeNewIcon-300x300.png" align="right" height="150px" />
-
-Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
-
-<br/><br/><br/><br/>
-
-----
-
-### iterm2
-
-<img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
-
-**`> Preferences (cmd + ,) > General`**
-Untick "Confirm closing multiple sessions"
-Untick "Confirm Quit iTerm2"
-
-**`> Preferences > Profiles > General > Working directory`**
-Select Reuse previous session's directory
-
-**`> Preferences > Profiles > Window > Settings For New windows`**
-Columns: 250, Rows: 100 - For a full screen terminal window each session
-
-----
-
-### Atom
-
-<img src="https://og.github.com/atom-mark/atom-mark@1200x630.png" align="right" height="150px" />
-
-Themes: `seti-ui` and `seti-syntax`
-
-Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
-
-<br/><br/><br/><br/>
-
-----
-
-### Misc
-
-<img src="http://core0.staticworld.net/images/article/2013/10/system-preferences-gallery-100065979-large.png" align="right" height="150px" />
-
-**`> System Preferences > Trackpad`**
-Tick: "Tap to click"
-
-To get rid of press and hold character completion, run:
-`defaults write -g ApplePressAndHoldEnabled -bool false`
-
-Empty the dock of every application and only have:
-Finder, Chrome, iterm2, SourceTree, Atom and Trash
-
-Hide the dock by right clicking it and selecting:
-"Turn hiding on"
-
-<img src="imgs/doc_applications.png" />
-
-----
-
-## Programs
-
-### Homebrew
-
-Follow instructions here: http://brew.sh
-
-### Git
-
-`brew update`
-
-`brew install git`
-
-Cache your git credentials by running:
-
-`git config --global credential.helper osxkeychain`
-
-`git config --global user.name <yourname>`
-`git config --global user.email <your@email.com>`
-
-_Note:_ if you have two factor authentication, your password will be your pa-key
-
-### Node
-
-You should install node with nvm, since then you will have more control over which version you are using.
-
-Install it with:
-
-`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash`
-(taken from [nvm](https://github.com/creationix/nvm))
-
-Check out the most recent version of node [here](https://nodejs.org/en/) and install it
-
-For me it was:
-
-`nvm install 6.9`
-
-Note: the two shell command lines nvm will append to your `.zshrc` will slow down your terminal startup quite considerably, so...
-
-After installation, I commented these appended lines out and replaced it with:
-
-```
-if [[ ":$PATH:" != *"$HOME/.nvm/versions/node/v6.9.1/bin"* ]]; then
-  PATH=$PATH:$HOME/.nvm/versions/node/v6.9.1/bin/
-fi
-```
-As I don't care for changing my node version too regularly and I don't to be slowed down by sourcing the whole nvm script each time I open a new terminal instance.
-
-I instead extend my path to contain the `node` and `npm` binary files installed by nvm, much faster :)
-
-### Postgres
-
-`brew update`
-
-`brew install postgres`
-
-Start the postgres server: `postgres -D /usr/local/var/postgres`
-
-In a new terminal window run: `psql -d postgres`
-
-### Redis
-
-`brew update`
-
-`brew install redis`
-
-Start the redis server: `redis-server`
-
-In a new terminal window run: `redis-cli`
-
-Now type `ping` and it should respond `pong`
-
-### Sass
-
-`gem install sass`
-
-If you get a permissions error, DONT SUDO!
-
-Instead change ownership of that directory
-
-`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
-
-Then run the command again
-
-## Dot files
-
-My vim config can be found [here](https://github.com/shouston3/My-Config/blob/master/.vimrc) and dowloaded with:
-
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
-
-My shell preference is the zsh shell with the oh-my-zsh extensions, see why [here](https://github.com/shouston3/My-Config/blob/master/WHY_ZSH.md)
+#### Zsh
 
 My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, install with:
 
@@ -241,6 +95,125 @@ I use the following plugin setup for `oh-my-zsh`:
 ```bash
 plugins=(git sams-aliases vi-mode)
 ```
+
+----
+
+#### Vim
+
+My vim config can be found [here](https://github.com/shouston3/My-Config/blob/master/.vimrc) and dowloaded with:
+
+`curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
+
+----
+
+#### Homebrew
+
+Follow instructions here: http://brew.sh
+
+----
+
+#### Git
+
+`brew update`
+
+`brew install git`
+
+Cache your git credentials by running:
+
+`git config --global credential.helper osxkeychain`
+
+`git config --global user.name <yourname>`
+`git config --global user.email <your@email.com>`
+
+_Note:_ if you have two factor authentication, your password will be your pa-key
+
+----
+
+#### Sass
+
+`gem install sass`
+
+If you get a permissions error, DONT SUDO!
+
+Instead change ownership of that directory
+
+`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
+
+Then run the command again
+
+----
+
+#### Node
+
+You should install node with nvm, since then you will have more control over which version you are using.
+
+Install it with:
+
+`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash`
+(taken from [nvm](https://github.com/creationix/nvm))
+
+Check out the most recent version of node [here](https://nodejs.org/en/) and install it
+
+For me it was:
+
+```bash
+nvm install 6.9`
+```
+
+----
+
+#### Elixir
+
+----
+
+#### Python
+
+----
+
+#### Postgres
+
+```bash
+brew update
+brew install postgres
+createdb `whoami``
+```
+
+Start the postgres server: `postgres -D /usr/local/var/postgres`
+
+In a new terminal window run: `psql`
+
+----
+
+#### Redis
+`brew update`
+
+`brew install redis`
+
+Start the redis server: `redis-server`
+
+In a new terminal window run: `redis-cli`
+
+Now type `ping` and it should respond `pong`
+
+----
+
+#### Heroku toolbelt
+
+
+#### Misc
+
+<img src="http://core0.staticworld.net/images/article/2013/10/system-preferences-gallery-100065979-large.png" align="right" height="150px" />
+
+**`> System Preferences > Trackpad`**
+Tick: "Tap to click"
+
+To get rid of press and hold character completion, run:
+`defaults write -g ApplePressAndHoldEnabled -bool false`
+
+Hide the dock by right clicking it and selecting:
+"Turn hiding on"
+
+----
 
 Now your set up with exactly my configuration!
 
