@@ -39,6 +39,7 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 ## Misc
 
 + [**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
++ [**Config installation**](https://github.com/shouston3/My-Config/tree/master#config-installation)
 
 ----
 
@@ -132,35 +133,13 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 The modern shell supported by an [awesome community](http://ohmyz.sh/)
 
-My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, install with:
-
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-theme.zsh-theme > ~/.oh-my-zsh/themes`
-
-Then set up by changing `ZSH_THEME="robbyrussel"` to `ZSH_THEME="sams-theme"`
-
-Your terminal should look something like this:
-
-[Here](https://github.com/shouston3/My-Config/blob/master/sams-aliases.plugin.zsh) are the functions and aliases I use day to day
-
-They can be installed with:
-
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-aliases.plugin.zsh > ~/.oh-my-zsh/plugins`
-
-Then set up by adding "sams-aliases" to your zsh plugins
-
-I use the following plugin setup for `oh-my-zsh`:
-
-```bash
-plugins=(git sams-aliases vi-mode)
-```
+See installation of my config [below]()
 
 ----
 
 #### Vim
 
 My vim config can be found [here](https://github.com/shouston3/My-Config/blob/master/.vimrc) and dowloaded with:
-
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
 
 I'm currently using version 7.4 and don't use macvim (this may change soon)
 
@@ -302,6 +281,16 @@ My key repeat settings found in `System Preferences > Keyboard` are:
 
 + Key Repeat: `fast`est
 + Delay Until Repeat: `Short`est
+
+#### Config installation
+
+My config can be installed with the following command
+
+WARNING: It is destructive to your `.vimrc` and `.zshrc`
+
+```bash
+curl -sSL https://raw.githubusercontent.com/shouston3/my-config/readme-refactor/script.sh | bash
+```
 
 ----
 
