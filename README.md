@@ -139,9 +139,17 @@ See installation of my config [below]()
 
 #### Vim
 
-My vim config can be found [here](https://github.com/shouston3/My-Config/blob/master/.vimrc) and dowloaded with:
+See installation of my config [below]()
 
-I'm currently using version 7.4 and don't use macvim (this may change soon)
+I currently use `MacVim` in the terminal `v 8.0`
+
+This can be installed with:
+
+```bash
+brew install macvim
+```
+
+I open `vim` in the terminal with `mvim -v` which has been aliased to `alias m='mvim -v'`
 
 ----
 
