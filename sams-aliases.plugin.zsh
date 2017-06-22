@@ -32,6 +32,7 @@ alias gitodo='cd ~/proj/gitodoro'
 alias gitodor='cd ~/proj/gitodoro'
 alias gitodoro='cd ~/proj/gitodoro'
 alias mc='cd ~/proj/my-config'
+alias m='mvim -v'
 
 # An easier way to git clone
 function gclone() {

@@ -1,25 +1,101 @@
 # My OSX Configuration
 
-## Chrome
-Install Chrome and set it as the default browser
-Add the [Vimium Chrome Extension](https://vimium.github.io/)
+This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 ## Applications to download
-**Spectacle** - For quick setting of your application window sizes
 
-**Karabiner** - Faster key repeat and key remapping
++ [**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
 
-**Seil** - For remapping the caps lock key
++ [**Karabiner-Elements**](https://github.com/shouston3/My-Config/tree/master#karabiner-elements) - For key remappings
 
-**Source Tree** - For better git visualization and management
++ [**Spectacle**](https://github.com/shouston3/My-Config/tree/master#spectacle) - For quick setting of application window sizes
 
-**iterm2** - For a better terminal
++ [**Iterm2**](https://github.com/shouston3/My-Config/tree/master#iterm2) - For a better terminal
 
-**Atom** - A easily configurable, beginner friendly text editor which is great for pair programming
+## Programs to install
+
++ [**Zsh**](https://github.com/shouston3/My-Config/tree/master#zsh)
+
++ [**Vim**](https://github.com/shouston3/My-Config/tree/master#vim)
+
++ [**Homebrew**](https://github.com/shouston3/My-Config/tree/master#homebrew)
+
++ [**Git**](https://github.com/shouston3/My-Config/tree/master#git)
+
++ [**Sass**](https://github.com/shouston3/My-Config/tree/master#sass)
+
++ [**Node**](https://github.com/shouston3/My-Config/tree/master#node)
+
++ [**Elixir**](https://github.com/shouston3/My-Config/tree/master#elixir)
+
++ [**Python**](https://github.com/shouston3/My-Config/tree/master#python)
+
++ [**Postgres**](https://github.com/shouston3/My-Config/tree/master#postgres)
+
++ [**Redis**](https://github.com/shouston3/My-Config/tree/master#redis)
+
++ [**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
+
+## Misc
+
++ [**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
++ [**Config installation**](https://github.com/shouston3/My-Config/tree/master#config-installation)
 
 ----
 
-### Spectacle
+#### Googe Chrome
+
+**`Settings > Preferences > Theme > Dark`**
+
+**Extensions**:
+
+<img src="https://raw.githubusercontent.com/philc/vimium/master/icons/icon128.png" align="right" height="80" />
+
++ [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) - Allows for browsing the web without leaving your keyboard
+
+<br><br>
+
+<img src="http://core0.staticworld.net/images/article/2013/03/splash-100030679-large.jpg" align="right" height="80" />
+
++ [Lastpass](https://www.lastpass.com/) - For managing all your passwords
+
+<br><br>
+
+<img src="http://www.yournerdybestfriend.com/wp-content/uploads/2013/07/color-picker-icon_final.jpg" align="right" height="80" />
+
++ [Colorzilla](http://www.colorzilla.com/) - For picking colours from your browser
+
+<br><br>
+
+<img src="https://getadblock.com/images/adblock_logo_stripe_test.png" align="right" height="80" />
+
++ [Adblock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) - Because I don't like seeing adverts
+
+<br><br>
+
+<img src="https://github.com/maximelebreton/quick-javascript-switcher/raw/master/src/icons/icon-48.png" align="right" height="80" />
+
++ [Quick Javascript Switcher](https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje) - I like to turn this off and on
+
+<br><br>
+
+----
+
+#### Karabiner-Elements
+
+<img src="https://dl2.macupdate.com/images/icons256/25141.png" align="right" height="150px" />
+
+The only feature I use is remapping my `Caps-Lock` key to `Esc` when tapped and to `Ctrl` when held
+
+To get this do the following:
+
++ Follow the setup instructions in [this comment](https://github.com/tekezo/Karabiner-Elements/pull/247#issue-181304263) and download the latest release [here](https://github.com/wwwjfy/Karabiner-Elements/releases)
++ Add the configuration in that comment to `~/.config/karabiner/karabiner.json`
++ Restart karabiner-elements and it should be working
+
+----
+
+#### Spectacle
 
 <img src="https://dl2.macupdate.com/images/icons256/41147.png" align="right" height="150px" />
 
@@ -37,49 +113,7 @@ Ensure in **`> System Preferences > Security`** you have allowed Spectacle contr
 
 ----
 
-### Karabiner
-
-<img src="https://dl2.macupdate.com/images/icons256/25141.png" align="right" height="150px" />
-
-**`> General > Change Control_L Key(Left Control)`** dropdown
-Tick: Control_L to Control_L (+ When you type Control_L only, send Escape)
-
-<img src="imgs/karabiner_ctrl_remap.png" />
-
-**`> Key repeat`**
-Tick: override the key repeat values of system
-Set: Delay until repeat: 150, Key repeat: 25
-
-<img src="imgs/karabiner_key_repeat.png" />
-
-Ensure in **`> System Preferences > Security`** you have allowed Karabiner control to your computer
-
-----
-
-### Seil
-
-<img src="https://pqrs.org/osx/karabiner/img/seil-icon@2x.png" align="right" height="150px" />
-
-Click change caps lock key and set input key code: 59
-
-**`> System Preferences > keyboard > modifier keys`**
-Change Caps Lock key to "No Action"
-
-<br/><br/><br/><br/>
-
-----
-
-### Source Tree
-
-<img src="https://blog.sourcetreeapp.com/files/2014/09/SourceTreeNewIcon-300x300.png" align="right" height="150px" />
-
-Follow the instructions to install after downloading from here: https://www.sourcetreeapp.com/
-
-<br/><br/><br/><br/>
-
-----
-
-### iterm2
+#### Iterm2
 
 <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/ITerm2-icon.png" align="right" height="150px" />
 
@@ -95,49 +129,47 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 ----
 
-### Atom
+#### Zsh
 
-<img src="https://og.github.com/atom-mark/atom-mark@1200x630.png" align="right" height="150px" />
+The modern shell supported by an [awesome community](http://ohmyz.sh/)
 
-Themes: `seti-ui` and `seti-syntax`
-
-Packages: `file-icons`, `highlight-selected`, `linter`, `linter-eslint` and `markdown-preview`
-
-<br/><br/><br/><br/>
+See installation of my config [below]()
 
 ----
 
-### Misc
+#### Vim
 
-<img src="http://core0.staticworld.net/images/article/2013/10/system-preferences-gallery-100065979-large.png" align="right" height="150px" />
+See installation of my config [below]()
 
-**`> System Preferences > Trackpad`**
-Tick: "Tap to click"
+I currently use `MacVim` in the terminal `v 8.0`
 
-To get rid of press and hold character completion, run:
-`defaults write -g ApplePressAndHoldEnabled -bool false`
+This can be installed with:
 
-Empty the dock of every application and only have:
-Finder, Chrome, iterm2, SourceTree, Atom and Trash
+```bash
+brew install macvim
+```
 
-Hide the dock by right clicking it and selecting:
-"Turn hiding on"
-
-<img src="imgs/doc_applications.png" />
+I open `vim` in the terminal with `mvim -v` which has been aliased to `alias m='mvim -v'`
 
 ----
 
-## Programs
-
-### Homebrew
+#### Homebrew
 
 Follow instructions here: http://brew.sh
 
-### Git
+This is what I ran:
 
-`brew update`
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-`brew install git`
+----
+
+#### Git
+
+```bash
+brew install git
+```
 
 Cache your git credentials by running:
 
@@ -148,7 +180,21 @@ Cache your git credentials by running:
 
 _Note:_ if you have two factor authentication, your password will be your pa-key
 
-### Node
+----
+
+#### Sass
+
+`gem install sass`
+
+If you get a permissions error, change ownership of that directory
+
+`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
+
+Then run the command again
+
+----
+
+#### Node
 
 You should install node with nvm, since then you will have more control over which version you are using.
 
@@ -161,34 +207,49 @@ Check out the most recent version of node [here](https://nodejs.org/en/) and ins
 
 For me it was:
 
-`nvm install 6.9`
-
-Note: the two shell command lines nvm will append to your `.zshrc` will slow down your terminal startup quite considerably, so...
-
-After installation, I commented these appended lines out and replaced it with:
-
+```bash
+nvm install 6.9`
 ```
-if [[ ":$PATH:" != *"$HOME/.nvm/versions/node/v6.9.1/bin"* ]]; then
-  PATH=$PATH:$HOME/.nvm/versions/node/v6.9.1/bin/
-fi
+
+----
+
+#### Elixir
+
+As simple as:
+
+```bash
+brew install elixir
 ```
-As I don't care for changing my node version too regularly and I don't to be slowed down by sourcing the whole nvm script each time I open a new terminal instance.
 
-I instead extend my path to contain the `node` and `npm` binary files installed by nvm, much faster :)
+----
 
-### Postgres
+#### Python
 
-`brew update`
+Although mac comes with `python`, we don't have `pip` and other python related tools
 
-`brew install postgres`
+Get these by running:
+
+```bash
+brew install python
+```
+
+----
+
+#### Postgres
+
+```bash
+brew update
+brew install postgres
+createdb `whoami``
+```
 
 Start the postgres server: `postgres -D /usr/local/var/postgres`
 
-In a new terminal window run: `psql -d postgres`
+In a new terminal window run: `psql`
 
-### Redis
+----
 
-`brew update`
+#### Redis
 
 `brew install redis`
 
@@ -198,49 +259,48 @@ In a new terminal window run: `redis-cli`
 
 Now type `ping` and it should respond `pong`
 
-### Sass
+----
 
-`gem install sass`
+#### Heroku toolbelt
 
-If you get a permissions error, DONT SUDO!
-
-Instead change ownership of that directory
-
-`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
-
-Then run the command again
-
-## Dot files
-
-My vim config can be found [here](https://github.com/shouston3/My-Config/blob/master/.vimrc) and dowloaded with:
-
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/.vimrc > ~/.vimrc`
-
-My shell preference is the zsh shell with the oh-my-zsh extensions, see why [here](https://github.com/shouston3/My-Config/blob/master/WHY_ZSH.md)
-
-My terminal theme can be found [here](https://github.com/shouston3/My-Config/blob/master/sams-theme.zsh-theme) and after you have oh-my-zsh installed, install with:
-
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-theme.zsh-theme > ~/.oh-my-zsh/themes`
-
-Then set up by changing `ZSH_THEME="robbyrussel"` to `ZSH_THEME="sams-theme"`
-
-Your terminal should look something like this:
-
-<img src="imgs/terminal.png" />
-
-[Here](https://github.com/shouston3/My-Config/blob/master/sams-aliases.plugin.zsh) are the functions and aliases I use day to day
-
-They can be installed with:
-
-`curl https://cdn.rawgit.com/shouston3/My-Config/master/sams-aliases.plugin.zsh > ~/.oh-my-zsh/plugins`
-
-Then set up by adding "sams-aliases" to your zsh plugins
-
-I use the following plugin setup for `oh-my-zsh`:
+As simple as
 
 ```bash
-plugins=(git sams-aliases vi-mode)
+brew install heroku
 ```
+
+#### Misc
+
+<img src="http://core0.staticworld.net/images/article/2013/10/system-preferences-gallery-100065979-large.png" align="right" height="150px" />
+
+`> System Preferences > Trackpad`
+
+Tick: `Tap to click`
+
+To get rid of press and hold character completion, run:
+
+```bash
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+Hide the dock by right clicking it and selecting: `Turn hiding on`
+
+My key repeat settings found in `System Preferences > Keyboard` are:
+
++ Key Repeat: `fast`est
++ Delay Until Repeat: `Short`est
+
+#### Config installation
+
+My config can be installed with the following command
+
+WARNING: It is destructive to your `.vimrc` and `.zshrc`
+
+```bash
+curl -sSL https://raw.githubusercontent.com/shouston3/my-config/readme-refactor/script.sh | bash
+```
+
+----
 
 Now your set up with exactly my configuration!
 
