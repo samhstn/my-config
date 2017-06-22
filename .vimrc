@@ -4,9 +4,8 @@ set clipboard=unnamed history=500
 set foldcolumn=1 " Extra margin to the left
 set nobackup nowritebackup noswapfile " Ridding of swp files
 set incsearch " Jumps to word as you type
-
-syntax enable 
-syntax on
+set mouse=a " Allowing for clicking around
+filetype plugin on
 
 let mapleader="\<space>"
 let tab_spacing=2 " I default to using a 2 tab indent
@@ -22,8 +21,6 @@ nnoremap D d$
 nnoremap Y y$
 nnoremap , ;
 vnoremap , ;
-nnoremap > >>
-nnoremap < <<
 
 " Eatchar function described in vimhelp
 func! Eatchar(pat)
@@ -49,4 +46,11 @@ vnoremap <leader>y :w !pbcopy<cr><cr>
 nnoremap <leader>p :set paste<cr>
 nnoremap <leader>n :set nopaste<cr>
 nnoremap <leader>q :q!<cr>
+nnoremap <leader>t :NERDTreeToggle<cr>
+nnoremap <leader>m :set mouse=<cr>
+
+execute pathogen#infect()
+
+syntax enable 
+syntax on
 
