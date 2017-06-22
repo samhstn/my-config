@@ -294,8 +294,6 @@ My key repeat settings found in `System Preferences > Keyboard` are:
 
 My config can be installed with the following command
 
-WARNING: It is destructive to your `.vimrc` and `.zshrc`
-
 ```bash
 curl -sSL https://raw.githubusercontent.com/shouston3/my-config/readme-refactor/script.sh | bash
 ```
