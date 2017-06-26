@@ -254,6 +254,10 @@ Start the postgres server: `postgres -D /usr/local/var/postgres`
 
 In a new terminal window run: `psql`
 
+I would also recommend using a gui for visualising your database, [Postico](https://eggerapps.at/postico/) would be my choice
+
+You can install it by clicking the download link [here](https://eggerapps.at/postico/) and following the download instructions
+
 ----
 
 #### Redis
