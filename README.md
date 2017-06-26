@@ -256,6 +256,16 @@ As simple as:
 brew install elixir
 ```
 
+I've also installed [Phoenix](http://www.phoenixframework.org/) along side this
+
+For the most up to date installation instructions see [here](http://www.phoenixframework.org/docs/installation#section-phoenix)
+
+It can be installed with:
+
+```bash
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+```
+
 ----
 
 #### Python
