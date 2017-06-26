@@ -180,6 +180,16 @@ Cache your git credentials by running:
 
 _Note:_ if you have two factor authentication, your password will be your pa-key
 
+
+You should also globally ignore your `.DS_Store`, this can be done with:
+
+```bash
+echo ".DS_Store" > ~/.gitignore_globalgit
+config --global core.excludesfile ~/.gitignore_global
+```
+
+----
+
 If you are looking for a git diff visualisation tool, I would recommend [Source Tree](https://www.sourcetreeapp.com/)
 
 But if you are using `vim`, there is an amazing built in tool that can do this for you.
