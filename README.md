@@ -211,6 +211,12 @@ For me it was:
 nvm install 6.9`
 ```
 
+Once installed you can update npm to the latest version by running:
+
+```bash
+npm install npm@latest -g
+```
+
 ----
 
 #### Elixir
