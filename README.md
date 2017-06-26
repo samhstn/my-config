@@ -133,13 +133,13 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 The modern shell supported by an [awesome community](http://ohmyz.sh/)
 
-See installation of my config [below]()
+See installation of my config [below](https://github.com/shouston3/my-config#config-installation)
 
 ----
 
 #### Vim
 
-See installation of my config [below]()
+See installation of my config [below](https://github.com/shouston3/my-config#config-installation)
 
 I currently use `MacVim` in the terminal `v 8.0`
 
@@ -293,8 +293,6 @@ My key repeat settings found in `System Preferences > Keyboard` are:
 #### Config installation
 
 My config can be installed with the following command
-
-WARNING: It is destructive to your `.vimrc` and `.zshrc`
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/shouston3/my-config/readme-refactor/script.sh | bash
