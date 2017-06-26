@@ -225,12 +225,13 @@ brew install elixir
 
 #### Python
 
-Although mac comes with `python`, we don't have `pip` and other python related tools
+Although mac comes with `python`, I would recommend upgrading to python3, also we don't have `pip` and other python related tools
 
 Get these by running:
 
 ```bash
-brew install python
+brew install python3
+pip3 install --upgrade pip setuptools wheel
 ```
 
 ----
