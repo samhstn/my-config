@@ -36,6 +36,8 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 + [**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
 
++ [**Grip**](https://github.com/shouston3/My-Config/tree/master#grip)
+
 ## Misc
 
 + [**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
@@ -268,6 +270,18 @@ As simple as
 
 ```bash
 brew install heroku
+```
+
+#### Grip
+
+If looking for a gui markdown previewer, look at using [haroopad](http://pad.haroopress.com)
+
+I personally don't like guis and want something I can run from the terminal
+
+Install [Grip](https://github.com/joeyespo/grip) with:
+
+```bash
+brew install grip
 ```
 
 #### Misc
