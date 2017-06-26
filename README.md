@@ -180,6 +180,25 @@ Cache your git credentials by running:
 
 _Note:_ if you have two factor authentication, your password will be your pa-key
 
+If you are looking for a git diff visualisation tool, I would recommend [Source Tree](https://www.sourcetreeapp.com/)
+
+But if you are using `vim`, there is an amazing built in tool that can do this for you.
+
+Everything you need to know about using the tool can be found in [this concise Stack Overflow answer](https://vi.stackexchange.com/a/626)
+
+To get set up run the following commands:
+
+```bash
+# Sets vimdiff as the tool to use when you type `git difftool`
+git config --global diff.tool vimdiff
+
+# Skip intermediary prompt step to get this running
+git config --global difftool.prompt false
+
+# add an alias so that you can get up and running by just typing `git d`
+git config --global alias.d difftool
+```
+
 ----
 
 #### Sass
