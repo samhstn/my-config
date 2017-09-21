@@ -89,11 +89,15 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 The only feature I use is remapping my `Caps-Lock` key to `Esc` when tapped and to `Ctrl` when held
 
-To get this do the following:
+This can be set up by importing the `Change caps_lock key` modifier keys sample from [pqrs](https://pqrs.org/osx/karabiner/complex_modifications/)
 
-+ Follow the setup instructions in [this comment](https://github.com/tekezo/Karabiner-Elements/pull/247#issue-181304263) and download the latest release [here](https://github.com/wwwjfy/Karabiner-Elements/releases)
-+ Add the configuration in that comment to `~/.config/karabiner/karabiner.json`
-+ Restart karabiner-elements and it should be working
+Then:
+
++ inside the Karabiner elements app, go to the `Complex Modifications` tab
+
++ click `add rule`
+
++ enable the `Change caps_lock to control if pressed with other keys, to escape if pressed alone.` rule
 
 ----
 
