@@ -1,6 +1,17 @@
 # My OSX Configuration
 
-This is my OSX setup for Sierra 10.12. I like a simple setup.
+This is my OSX setup for Sierra 10
+
+## Cleaning your mac
+
++ Back up what you need
++ Boot your mac in recovery mode:
+  Restart and hold `Cmd + R`
++ Select Disk Utility and click Continue.
++ Click `Internal > Untitled` then `Erase`
++ Once complete click `Done`
++ Go back to the home screen for recovery mode
++ Click Reinstall macOS
 
 ## Applications to download
 
@@ -22,8 +33,6 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 + [**Git**](https://github.com/shouston3/My-Config/tree/master#git)
 
-+ [**Sass**](https://github.com/shouston3/My-Config/tree/master#sass)
-
 + [**Node**](https://github.com/shouston3/My-Config/tree/master#node)
 
 + [**Elixir**](https://github.com/shouston3/My-Config/tree/master#elixir)
@@ -37,6 +46,10 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 + [**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
 
 + [**Grip**](https://github.com/shouston3/My-Config/tree/master#grip)
+
++ [**Docker**](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac)
+
++ [**MacTex**](http://www.tug.org/mactex/)
 
 ## Misc
 
@@ -214,18 +227,6 @@ git config --global difftool.prompt false
 # add an alias so that you can get up and running by just typing `git d`
 git config --global alias.d difftool
 ```
-
-----
-
-#### Sass
-
-`gem install sass`
-
-If you get a permissions error, change ownership of that directory
-
-`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
-
-Then run the command again
 
 ----
 
