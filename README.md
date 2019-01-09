@@ -1,7 +1,5 @@
 # My OSX Configuration
 
-This is my OSX setup for Sierra 10.12. I like a simple setup.
-
 ## Applications to download
 
 + [**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
