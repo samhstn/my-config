@@ -376,4 +376,4 @@ Now your set up with exactly my configuration!
 
 If you think I have missed anything out, or should be doing something differently let me know in an [issue](https://github.com/shouston3/my-config/issues)
 
-Or through gitter - [![gitter badge](https://img.shields.io/badge/gitter-shouston3-brightgreen.svg)](https://gitter.im/shouston3)
+Or through gitter - [![gitter badge](https://img.shields.io/badge/gitter-samhstn-brightgreen.svg)](https://gitter.im/samhstn)
