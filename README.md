@@ -192,6 +192,12 @@ echo ".DS_Store" > ~/.gitignore_globalgit
 config --global core.excludesfile ~/.gitignore_global
 ```
 
+For a more concise output of `$ gb` (see [here](https://stackoverflow.com/a/48370253)) run the following command:
+
+```bash
+git config --global pager.branch false
+```
+
 ----
 
 If you are looking for a git diff visualisation tool, I would recommend [Source Tree](https://www.sourcetreeapp.com/)
