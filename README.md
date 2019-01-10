@@ -131,6 +131,9 @@ Select Reuse previous session's directory
 **`> Preferences > Profiles > Window > Settings For New windows`**
 Columns: 250, Rows: 100 - For a full screen terminal window each session
 
+**`> Preferences > Profiles > Terminal > Notifications`**
+Tick `Silence bell`
+
 ----
 
 #### Zsh
