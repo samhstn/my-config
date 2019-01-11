@@ -113,7 +113,8 @@ I have configured them away from the default to not override other hotkeys
  - Top Half: cmd + alt + ctrl + k
  - Bottom Half: cmd + alt + ctrl + j
 
-Ensure in **`> System Preferences > Security`** you have allowed Spectacle control to your computer
+**`> Preferences`**
+Tick `Launch Spectacle at login`
 
 ----
 
