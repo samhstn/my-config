@@ -341,10 +341,43 @@ My key repeat settings found in `System Preferences > Keyboard` are:
 
 #### Config installation
 
-My config can be installed with the following commands
+My config can be installed with the following commands:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/shouston3/my-config/readme-refactor/script.sh | bash
+export RAW_MY_CONF_GH_URL="https://raw.githubusercontent.com/samhstn/my-config/master"
+
+# Configure our `.vimrc`
+curl -SLs "$RAW_MY_CONF_GH_URL/.vimrc" > ~/.vimrc
+
+# Setup vim-pathogen - taken from [`vim-pathogen` repo](https://github.com/tpope/vim-pathogen#installation)
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Add `vim-repeat` and `vim-surround` packages
+git clone git://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
+git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
+
+# Install zsh - taken from the [`oh-my-zsh` repo](https://github.com/robbyrussell/oh-my-zsh#via-curl)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Add sams theme and plugin
+md ~/.oh-my-zsh/plugins/sams-config
+curl -SLs "$RAW_MY_CONF_GH_URL/sams-config.plugin.zsh" > ~/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh
+curl -SLs "$RAW_MY_CONF_GH_URL/sams-theme.zsh-theme" > ~/.oh-my-zsh/themes/sams-theme.zsh-theme
+```
+
+Now edit your `.zshrc` like so:
+
+```vim
+# Add `sams-theme`
+ZSH_THEME="sams-theme"
+
+# Configure the following plugins
+plugins=(
+  git
+  sams-config
+  vi-mode
+)
 ```
 
 ----
