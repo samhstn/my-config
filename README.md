@@ -36,6 +36,8 @@
 
 + [**Grip**](https://github.com/shouston3/My-Config/tree/master#grip)
 
++ [**Ngrok**](https://github.com/shouston3/My-Config/tree/master#ngrok)
+
 ## Misc
 
 + [**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
@@ -230,6 +232,8 @@ aws configure
 
 I install `node` with `brew` - you can use `nvm`, but I don't find I need to change my node version often enough.
 
+Install with:
+
 ```bash
 brew install node
 ```
@@ -300,7 +304,7 @@ Now type `ping` and it should respond `pong`
 
 #### Heroku toolbelt
 
-As simple as
+Install with:
 
 ```bash
 brew install heroku
@@ -316,6 +320,16 @@ Install [Grip](https://github.com/joeyespo/grip) with:
 
 ```bash
 brew install grip
+```
+
+#### Ngrok
+
+[Ngrok](https://ngrok.com) makes it really easy to spin up a quick public `http` url.
+
+Install with:
+
+```bash
+brew cask install ngrok
 ```
 
 #### Misc
