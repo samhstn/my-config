@@ -2,8 +2,8 @@ alias desk='cd ~/Desktop && ls'
 alias doc='cd ~/Documents && ls'
 alias down='cd ~/Downloads && ls'
 alias proj='cd ~/proj && ls'
-alias zrc='vim ~/.zshrc'
-alias vrc='vim ~/.vimrc'
+alias zrc='mvim -v ~/.zshrc'
+alias vrc='mvim -v ~/.vimrc'
 alias cl='clear'
 alias colours='spectrum_ls'
 alias n='npm run'
@@ -13,9 +13,8 @@ alias ss='echo "sourcing zshrc"; source ~/.zshrc'
 alias ns='npm start'
 alias nt='npm t'
 alias nw='npm run watch'
-alias za='mvim -v ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh'
+alias za='mvim -v ~/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh'
 alias ze='mvim -v ~/.zsh_envs'
-alias ric='cd ~/proj/crm-base-generic/'
 alias m='mvim -v'
 alias ms='mix phx.server'
 alias mpr='mix phx.routes'
@@ -52,7 +51,7 @@ function vo() {
   head -n $arg |
   tail -n -1 |
   awk -F':' '{print $1}' | # only include text until :
-  xargs -o vim
+  xargs -o mvim -v
 }
 
 # mr opens the last vim file I had open
