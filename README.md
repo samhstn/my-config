@@ -20,7 +20,7 @@
 
 + [**Git**](https://github.com/shouston3/My-Config/tree/master#git)
 
-+ [**Sass**](https://github.com/shouston3/My-Config/tree/master#sass)
++ [**AWS**](https://github.com/shouston3/My-Config/tree/master#aws)
 
 + [**Node**](https://github.com/shouston3/My-Config/tree/master#node)
 
@@ -225,39 +225,22 @@ git config --global alias.d difftool
 
 ----
 
-#### Sass
+#### AWS
 
-`gem install sass`
-
-If you get a permissions error, change ownership of that directory
-
-`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
-
-Then run the command again
+```bash
+brew install awscli
+# configure your region, access key id and secret access key
+aws configure
+```
 
 ----
 
 #### Node
 
-You should install node with nvm, since then you will have more control over which version you are using.
-
-Install it with:
-
-`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash`
-(taken from [nvm](https://github.com/creationix/nvm))
-
-Check out the most recent version of node [here](https://nodejs.org/en/) and install it
-
-For me it was:
+I install node with brew - you can use nvm, but I don't find I need to change my node version often enough.
 
 ```bash
-nvm install 6.9`
-```
-
-Once installed you can update npm to the latest version by running:
-
-```bash
-npm install npm@latest -g
+brew install node
 ```
 
 ----
@@ -277,7 +260,7 @@ For the most up to date installation instructions see [here](http://www.phoenixf
 It can be installed with:
 
 ```bash
-mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+mix archive.install hex phx_new 1.4.0
 ```
 
 ----
@@ -298,9 +281,8 @@ pip3 install --upgrade pip setuptools wheel
 #### Postgres
 
 ```bash
-brew update
 brew install postgres
-createdb `whoami``
+createdb $(whoami)
 ```
 
 Start the postgres server: `postgres -D /usr/local/var/postgres`
@@ -363,7 +345,7 @@ Hide the dock by right clicking it and selecting: `Turn hiding on`
 
 My key repeat settings found in `System Preferences > Keyboard` are:
 
-+ Key Repeat: `fast`est
++ Key Repeat: `Fast`est
 + Delay Until Repeat: `Short`est
 
 #### Config installation
