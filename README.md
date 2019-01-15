@@ -1,7 +1,5 @@
 # My OSX Configuration
 
-This is my OSX setup for Sierra 10.12. I like a simple setup.
-
 ## Applications to download
 
 + [**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
@@ -22,7 +20,7 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 
 + [**Git**](https://github.com/shouston3/My-Config/tree/master#git)
 
-+ [**Sass**](https://github.com/shouston3/My-Config/tree/master#sass)
++ [**AWS**](https://github.com/shouston3/My-Config/tree/master#aws)
 
 + [**Node**](https://github.com/shouston3/My-Config/tree/master#node)
 
@@ -37,6 +35,8 @@ This is my OSX setup for Sierra 10.12. I like a simple setup.
 + [**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
 
 + [**Grip**](https://github.com/shouston3/My-Config/tree/master#grip)
+
++ [**Ngrok**](https://github.com/shouston3/My-Config/tree/master#ngrok)
 
 ## Misc
 
@@ -115,7 +115,10 @@ I have configured them away from the default to not override other hotkeys
  - Top Half: cmd + alt + ctrl + k
  - Bottom Half: cmd + alt + ctrl + j
 
-Ensure in **`> System Preferences > Security`** you have allowed Spectacle control to your computer
+**`> Preferences`**
+Tick `Launch Spectacle at login`
+
+Ensure to move the Spectacle app from the `Downloads` folder to the `Applications` folder (Thanks to comment [here](https://github.com/eczarny/spectacle/issues/776#issuecomment-348722654)).
 
 ----
 
@@ -133,6 +136,9 @@ Select Reuse previous session's directory
 **`> Preferences > Profiles > Window > Settings For New windows`**
 Columns: 250, Rows: 100 - For a full screen terminal window each session
 
+**`> Preferences > Profiles > Terminal > Notifications`**
+Tick `Silence bell`
+
 ----
 
 #### Zsh
@@ -147,7 +153,7 @@ See installation of my config [below](https://github.com/shouston3/my-config#con
 
 See installation of my config [below](https://github.com/shouston3/my-config#config-installation)
 
-I currently use `MacVim` in the terminal `v 8.0`
+I use `MacVim` in the terminal.
 
 This can be installed with:
 
@@ -194,62 +200,42 @@ echo ".DS_Store" > ~/.gitignore_globalgit
 config --global core.excludesfile ~/.gitignore_global
 ```
 
-----
+By default `git` sends it's gb output to the system pager, I always would like this disabled for the `git branch` command.
 
-If you are looking for a git diff visualisation tool, I would recommend [Source Tree](https://www.sourcetreeapp.com/)
-
-But if you are using `vim`, there is an amazing built in tool that can do this for you.
-
-Everything you need to know about using the tool can be found in [this concise Stack Overflow answer](https://vi.stackexchange.com/a/626)
-
-To get set up run the following commands:
+This can be configured (see [here](https://stackoverflow.com/a/48370253)) by running the following command:
 
 ```bash
-# Sets vimdiff as the tool to use when you type `git difftool`
-git config --global diff.tool vimdiff
+git config --global pager.branch false
+```
 
-# Skip intermediary prompt step to get this running
-git config --global difftool.prompt false
+For `git diff` I would like it to output to the system pager if the diff doesn't fit on the terminal screen and output to stdout otherwise.
 
-# add an alias so that you can get up and running by just typing `git d`
-git config --global alias.d difftool
+This can be configured (see [here](https://stackoverflow.com/a/31399632/4699289)) by running:
+
+```bash
+git config --global core.pager "less -FRSX"
 ```
 
 ----
 
-#### Sass
+#### AWS
 
-`gem install sass`
-
-If you get a permissions error, change ownership of that directory
-
-`sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0` (or whatever ruby version you have)
-
-Then run the command again
+```bash
+brew install awscli
+# configure your region, access key id and secret access key
+aws configure
+```
 
 ----
 
 #### Node
 
-You should install node with nvm, since then you will have more control over which version you are using.
+I install `node` with `brew` - you can use `nvm`, but I don't find I need to change my node version often enough.
 
-Install it with:
-
-`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash`
-(taken from [nvm](https://github.com/creationix/nvm))
-
-Check out the most recent version of node [here](https://nodejs.org/en/) and install it
-
-For me it was:
+Install with:
 
 ```bash
-nvm install 6.9`
-```
-
-Once installed you can update npm to the latest version by running:
-
-```bash
-npm install npm@latest -g
+brew install node
 ```
 
 ----
@@ -269,7 +255,7 @@ For the most up to date installation instructions see [here](http://www.phoenixf
 It can be installed with:
 
 ```bash
-mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+mix archive.install hex phx_new 1.4.0
 ```
 
 ----
@@ -290,12 +276,11 @@ pip3 install --upgrade pip setuptools wheel
 #### Postgres
 
 ```bash
-brew update
 brew install postgres
-createdb `whoami``
+createdb $(whoami)
 ```
 
-Start the postgres server: `postgres -D /usr/local/var/postgres`
+Start the postgres server: `postgres -D /usr/local/var/postgres` (If you are using my `alias`es, you can just run `pg`).
 
 In a new terminal window run: `psql`
 
@@ -319,7 +304,7 @@ Now type `ping` and it should respond `pong`
 
 #### Heroku toolbelt
 
-As simple as
+Install with:
 
 ```bash
 brew install heroku
@@ -335,6 +320,16 @@ Install [Grip](https://github.com/joeyespo/grip) with:
 
 ```bash
 brew install grip
+```
+
+#### Ngrok
+
+[Ngrok](https://ngrok.com) makes it really easy to spin up a quick public `http` url.
+
+Install with:
+
+```bash
+brew cask install ngrok
 ```
 
 #### Misc
@@ -355,15 +350,48 @@ Hide the dock by right clicking it and selecting: `Turn hiding on`
 
 My key repeat settings found in `System Preferences > Keyboard` are:
 
-+ Key Repeat: `fast`est
++ Key Repeat: `Fast`est
 + Delay Until Repeat: `Short`est
 
 #### Config installation
 
-My config can be installed with the following command
+My config can be installed with the following commands:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/shouston3/my-config/readme-refactor/script.sh | bash
+export RAW_MY_CONF_GH_URL="https://raw.githubusercontent.com/samhstn/my-config/master"
+
+# Configure our `.vimrc`
+curl -SLs "$RAW_MY_CONF_GH_URL/.vimrc" > ~/.vimrc
+
+# Setup vim-pathogen - taken from [`vim-pathogen` repo](https://github.com/tpope/vim-pathogen#installation)
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Add `vim-repeat` and `vim-surround` packages
+git clone git://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
+git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
+
+# Install zsh - taken from the [`oh-my-zsh` repo](https://github.com/robbyrussell/oh-my-zsh#via-curl)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Add sams theme and plugin
+md ~/.oh-my-zsh/plugins/sams-config
+curl -SLs "$RAW_MY_CONF_GH_URL/sams-config.plugin.zsh" > ~/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh
+curl -SLs "$RAW_MY_CONF_GH_URL/sams-theme.zsh-theme" > ~/.oh-my-zsh/themes/sams-theme.zsh-theme
+```
+
+Now edit your `.zshrc` like so:
+
+```vim
+# Add `sams-theme`
+ZSH_THEME="sams-theme"
+
+# Configure the following plugins
+plugins=(
+  git
+  sams-config
+  vi-mode
+)
 ```
 
 ----
@@ -372,4 +400,4 @@ Now your set up with exactly my configuration!
 
 If you think I have missed anything out, or should be doing something differently let me know in an [issue](https://github.com/shouston3/my-config/issues)
 
-Or through gitter - [![gitter badge](https://img.shields.io/badge/gitter-shouston3-brightgreen.svg)](https://gitter.im/shouston3)
+Or through gitter - [![gitter badge](https://img.shields.io/badge/gitter-samhstn-brightgreen.svg)](https://gitter.im/samhstn)

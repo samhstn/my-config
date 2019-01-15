@@ -2,14 +2,10 @@ alias desk='cd ~/Desktop && ls'
 alias doc='cd ~/Documents && ls'
 alias down='cd ~/Downloads && ls'
 alias proj='cd ~/proj && ls'
-alias prj='cd ~/proj && ls'
-alias zrc='vim ~/.zshrc'
-alias vrc='vim ~/.vimrc'
-alias erc='vim ~/.eslintrc'
+alias zrc='mvim -v ~/.zshrc'
+alias vrc='mvim -v ~/.vimrc'
 alias cl='clear'
-alias m='vim'
 alias colours='spectrum_ls'
-alias st='open -a SourceTree .'
 alias n='npm run'
 alias lll='ls' # for typing ls with one hand
 alias pg='postgres -D /usr/local/var/postgres'
@@ -17,22 +13,18 @@ alias ss='echo "sourcing zshrc"; source ~/.zshrc'
 alias ns='npm start'
 alias nt='npm t'
 alias nw='npm run watch'
-alias nsm='nodemon -e js,json,html,css -x "npm start"'
-alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
-alias nc='npm run coverage'
-alias ntm="nodemon -x 'npm t'"
-alias opencoverage='open coverage/lcov-report/index.html'
-alias za='vim ~/.oh-my-zsh/plugins/sams-aliases/sams-aliases.plugin.zsh'
-alias ric='cd ~/proj/crm-base-generic/'
-alias le='cd ~/proj/le'
-alias lang='cd ~/proj/lang'
-alias gito='cd ~/proj/gitodoro'
-alias gitod='cd ~/proj/gitodoro'
-alias gitodo='cd ~/proj/gitodoro'
-alias gitodor='cd ~/proj/gitodoro'
-alias gitodoro='cd ~/proj/gitodoro'
-alias mc='cd ~/proj/my-config'
+alias za='mvim -v ~/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh'
+alias ze='mvim -v ~/.zsh_envs'
 alias m='mvim -v'
+alias ms='mix phx.server'
+alias mpr='mix phx.routes'
+alias python=python3
+alias pip=pip3
+alias dj='python manage.py'
+alias ggpuhs=ggpush
+# add everything, amend last commit and force push.
+# consider commenting this command if it's too destructive, but I like it.
+alias gcc!='git add --all && git commit -v --amend --no-edit && git push origin $(git_current_branch) -f'
 
 # An easier way to git clone
 function gclone() {
@@ -59,7 +51,7 @@ function vo() {
   head -n $arg |
   tail -n -1 |
   awk -F':' '{print $1}' | # only include text until :
-  xargs -o vim
+  xargs -o mvim -v
 }
 
 # mr opens the last vim file I had open
@@ -81,19 +73,9 @@ function ml() {
   xargs -o vim
 }
 
-# cdl runs the last command, replacing the first argument with cd ...
-function cdl() {
-  cdpath="$(history |
-  tail -n -1 |
-  awk '{print substr($0, index($0, $2))}' |
-  awk '{print $2}')"
-  cd $cdpath
-}
-
-# s shows all the sripts in a package.json, s i shows the scripts and their definition
+# `s` shows all the sripts in a package.json, s i shows the scripts and their definition
 function s() {
-  if [ "$1" = "i" ]
-  then
+  if [ "$1" = "i" ]; then
     cat ./package.json |
     awk 'BEGIN{found=0} /"scripts":/{found=1} {if (found) print }' |
     tail -n +2 | # remove the '"scripts": {' line
@@ -107,3 +89,14 @@ function s() {
     sed 's/"//g'
   fi
 }
+
+function addtopath() {
+  if [[ $PATH != *"$1"* ]]; then
+    PATH=$PATH:$1
+  fi
+}
+
+# A place for all our environment variables
+if [ -f $HOME/.zsh_envs ]; then
+  source $HOME/.zsh_envs
+fi
