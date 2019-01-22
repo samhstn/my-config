@@ -307,7 +307,7 @@ Now type `ping` and it should respond `pong`
 Install with:
 
 ```bash
-brew install heroku
+brew install heroku/brew/heroku
 ```
 
 #### Grip
