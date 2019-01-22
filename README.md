@@ -185,10 +185,11 @@ brew install git
 
 Cache your git credentials by running:
 
-`git config --global credential.helper osxkeychain`
-
-`git config --global user.name <yourname>`
-`git config --global user.email <your@email.com>`
+```bash
+git config --global credential.helper osxkeychain
+git config --global user.name <yourname>
+git config --global user.email <your@email.com>
+```
 
 _Note:_ if you have two factor authentication, your password will be your pa-key
 
@@ -196,8 +197,8 @@ _Note:_ if you have two factor authentication, your password will be your pa-key
 You should also globally ignore your `.DS_Store`, this can be done with:
 
 ```bash
-echo ".DS_Store" > ~/.gitignore_globalgit
-config --global core.excludesfile ~/.gitignore_global
+echo ".DS_Store" > ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 ```
 
 By default `git` sends it's gb output to the system pager, I always would like this disabled for the `git branch` command.
@@ -310,6 +311,8 @@ Install with:
 brew install heroku/brew/heroku
 ```
 
+----
+
 #### Grip
 
 If looking for a gui markdown previewer, look at using [haroopad](http://pad.haroopress.com)
@@ -322,6 +325,8 @@ Install [Grip](https://github.com/joeyespo/grip) with:
 brew install grip
 ```
 
+----
+
 #### Ngrok
 
 [Ngrok](https://ngrok.com) makes it really easy to spin up a quick public `http` url.
@@ -331,6 +336,8 @@ Install with:
 ```bash
 brew cask install ngrok
 ```
+
+----
 
 #### Misc
 
@@ -352,6 +359,8 @@ My key repeat settings found in `System Preferences > Keyboard` are:
 
 + Key Repeat: `Fast`est
 + Delay Until Repeat: `Short`est
+
+----
 
 #### Config installation
 
