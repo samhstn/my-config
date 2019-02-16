@@ -372,13 +372,12 @@ export RAW_MY_CONF_GH_URL="https://raw.githubusercontent.com/samhstn/my-config/m
 # Configure our `.vimrc`
 curl -SLs "$RAW_MY_CONF_GH_URL/.vimrc" > ~/.vimrc
 
-# Setup vim-pathogen - taken from [`vim-pathogen` repo](https://github.com/tpope/vim-pathogen#installation)
-mkdir -p ~/.vim/autoload ~/.vim/bundle
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+# Setup vim packages
+mkdir -p ~/.vim/pack/bundle/start
 
 # Add `vim-repeat` and `vim-surround` packages
-git clone git://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
-git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
+git clone git://github.com/tpope/vim-repeat.git ~/.vim/pack/bundle/start/vim-repeat
+git clone git://github.com/tpope/vim-surround.git ~/.vim/pack/bundle/start/vim-surround
 
 # Install zsh - taken from the [`oh-my-zsh` repo](https://github.com/robbyrussell/oh-my-zsh#via-curl)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

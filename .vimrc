@@ -49,8 +49,5 @@ nnoremap <leader>q :q!<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
 nnoremap <leader>m :set mouse=<cr>
 
-execute pathogen#infect()
-
 syntax enable 
 syntax on
-
