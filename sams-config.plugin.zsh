@@ -33,61 +33,66 @@ function gclone() {
 
 # grepe is a numbered case insensitive recursive search in current dir
 function grepe() {
-  grep -ri --exclude-dir=node_modules $1 . |
-  egrep -v '/.{120}/' |
-  awk '{print NR, $0}'
+  git grep --no-index --exclude-standard $1 | # grep ignoring all files in .gitignore
+  awk '{print NR, $0}' # output of above command with line numbers
 }
 
-# vo n opens a file n from the last grepe output that has been run within the last 20 commands
-function vo() {
+# grepeo opens file of last grepe output
+# grepeo n opens specific file of grepe output
+#
+# Example:
+#
+# $ grepe hello
+# 1 index.html:<div>Hello World</div>
+# 2 style.css:.hello {
+#
+# $ grepeo # opens index.html in vim
+# $ grepeo 1 # opens index.html
+# $ grepeo 2 # opens style.css
+function grepeo() {
   arg=${1-1} # use arg if defined, else default to 1
-  history |
-  tail -n -20 |
-  grep grepe |
-  tail -n -1 |
-  awk '{print substr($0, index($0, $3))}' | # take the grepe argument from history
-  xargs -J % grep -ri --exclude-dir=node_modules % . |
-  egrep -v '/.{120}/' |
-  head -n $arg |
-  tail -n -1 |
-  awk -F':' '{print $1}' | # only include text until :
-  xargs -o mvim -v
+
+  last_grepe=$(
+    fc -ln | # -l outputs history, -n suppressses numbers
+    egrep '^grepe' | # filter grepe commands
+    tail -1 | # take the last grepe command
+    sed 's/^grepe //'
+  )
+
+  grepe_file=$(
+    git grep --no-index --exclude-standard $last_grepe | # grep with ignoring all files in .gitignore
+    sed -n "$arg p" | # take only $arg line
+    sed 's/:.*//' # remove everything after file name
+  )
+
+  m $grepe_file
 }
 
 # mr opens the last vim file I had open
 function mr() {
-  history |
-  awk '{print substr($0, index($0, $2))}' | # prints all the arguments excluding the 1st
-  egrep '^m\ ' | # filter in lines beginning with m<space>
-  awk '{print $2}' |
-  tail -n -1 |
-  xargs -o vim
+  last_file=$(
+    fc -ln | # -l outputs history, -n suppressses numbers
+    egrep '^m\ ' | # filter lines beginning with 'm '
+    sed 's/^m //g' | # remove prepending 'm '
+    tail -1 # take the last value
+  )
+
+  m $last_file
 }
 
-# ml runs the last command, replacing the first argument with vim ...
+# ml runs the last command, replacing the first argument with vim
 function ml() {
-  history |
-  tail -n -1 |
-  awk '{print substr($0, index($0, $2))}' |
-  awk '{print $2}' |
-  xargs -o vim
+  trailing_args_of_last_command=$(
+    fc -ln -1 | # take last command from history
+    sed -E 's/[^[:space:]]+[[:space:]]//' # remove first word (`echo hello world` -> `hello world`)
+  )
+
+  m $trailing_args_of_last_command
 }
 
-# `s` shows all the sripts in a package.json, s i shows the scripts and their definition
+# `$ s` shows all the sripts in your package.json
 function s() {
-  if [ "$1" = "i" ]; then
-    cat ./package.json |
-    awk 'BEGIN{found=0} /"scripts":/{found=1} {if (found) print }' |
-    tail -n +2 | # remove the '"scripts": {' line
-    awk 'BEGIN{found=1} /\},/{found=0} {if (found) print }'
-  else
-    cat ./package.json |
-    awk 'BEGIN{found=0} /"scripts":/{found=1} {if (found) print }' |
-    tail -n +2 | # remove the '"scripts": {' line
-    awk 'BEGIN{found=1} /\},/{found=0} {if (found) print }' |
-    awk -F'":' '{print $1}' |
-    sed 's/"//g'
-  fi
+  node -e "console.log(require('./package.json').scripts);"
 }
 
 function addtopath() {
