@@ -5,10 +5,10 @@ set foldcolumn=1 " Extra margin to the left
 set nobackup nowritebackup noswapfile " Ridding of swp files
 set incsearch " Jumps to word as you type
 set mouse=a " Allowing for clicking around
-filetype plugin on
+filetype plugin indent on
 
 let mapleader="\<space>"
-let tab_spacing=2 " I default to using a 2 tab indent
+let tab_spacing=2 " I default to using a 2 space tab indent
 
 let &tabstop=tab_spacing " tab key inserts 2 spaces
 let &shiftwidth=tab_spacing " < and > move text by 2 spaces
@@ -40,14 +40,6 @@ endfunc
 " Change tab spacing to 2 or 4
 nnoremap <leader>4 :call SetTabs(4)<cr>
 nnoremap <leader>2 :call SetTabs(2)<cr>
-" Copy visually selected lines to system clipboard
-vnoremap <leader>y :w !pbcopy<cr><cr>
-" Shortcuts for ':set paste' and ':set nopaste'
-nnoremap <leader>p :set paste<cr>
-nnoremap <leader>n :set nopaste<cr>
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>t :NERDTreeToggle<cr>
-nnoremap <leader>m :set mouse=<cr>
 
 syntax enable 
-syntax on
