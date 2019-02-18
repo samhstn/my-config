@@ -21,6 +21,7 @@ nnoremap D d$
 nnoremap Y y$
 nnoremap , ;
 vnoremap , ;
+nnoremap q; q:
 
 " Eatchar function described in vimhelp
 func! Eatchar(pat)
