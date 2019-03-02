@@ -34,6 +34,7 @@ function gclone() {
 # grepe is a numbered case insensitive recursive search in current dir
 function grepe() {
   git grep --no-index --exclude-standard $1 | # grep ignoring all files in .gitignore
+  egrep -v '.{200}' | # ignore lines which are longer than 200
   awk '{print NR, $0}' # output of above command with line numbers
 }
 
@@ -61,7 +62,8 @@ function grepeo() {
 
   grepe_file=$(
     git grep --no-index --exclude-standard $last_grepe | # grep with ignoring all files in .gitignore
-    sed -n "$arg p" | # take only $arg line
+    egrep -v '.{200}' | # ignore lines which are longer than 200
+    sed -n "$arg p" | # take only $arg line - see here for info: https://stackoverflow.com/a/1429628/4699289
     sed 's/:.*//' # remove everything after file name
   )
 
