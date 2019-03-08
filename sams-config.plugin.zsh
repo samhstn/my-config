@@ -93,6 +93,13 @@ function ml() {
   m $trailing_args_of_last_command
 }
 
+# movtogif converts any /path/to/file.mov file into a /path/to/file.gif file
+# inspired by https://gist.github.com/dergachev/4627207
+function movtogif() {
+  ffmpeg -i "$1" -s 600x400 -pix_fmt rgb24 -r 10 -f gif - |
+  gifsicle --optimize=3 --delay=3 > "$(echo $1 | sed 's/\.mov$//').gif"
+}
+
 # `$ s` shows all the sripts in your package.json
 function s() {
   node -e "console.log(require('./package.json').scripts);"
