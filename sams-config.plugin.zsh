@@ -35,7 +35,8 @@ function gclone() {
 function grepe() {
   git grep --no-index --exclude-standard $1 | # grep ignoring all files in .gitignore
   egrep -v '.{200}' | # ignore lines which are longer than 200
-  awk '{print NR, $0}' # output of above command with line numbers
+  awk '{print NR, $0}' | # output of above command with line numbers
+  grep $1 # highlight the original search
 }
 
 # grepeo opens file of last grepe output
