@@ -212,6 +212,22 @@ This is what I ran:
 brew install git
 ```
 
+If you have `sams-config` `zsh` plugin installed, you can configure your ssh key by running:
+
+```bash
+keygen <hostname> <company-name>
+```
+
+For example:
+
+```bash
+keygen github.com samhstn
+```
+
+Then paste what is currently in your clipboard into the `key` section [here](https://github.com/settings/ssh/new)
+
+Otherwise you can follow instructions for setting up your ssh keys in [this medium article](https://medium.com/@fredrikanderzon/setting-up-ssh-keys-for-multiple-bitbucket-github-accounts-a5244c28c0ac)
+
 Cache your git credentials by running:
 
 ```bash
@@ -219,9 +235,6 @@ git config --global credential.helper osxkeychain
 git config --global user.name <yourname>
 git config --global user.email <your@email.com>
 ```
-
-_Note:_ if you have two factor authentication, your password will be your pa-key
-
 
 You should also globally ignore your `.DS_Store`, this can be done with:
 
