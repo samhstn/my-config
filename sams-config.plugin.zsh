@@ -28,7 +28,33 @@ alias gcc!='git add --all && git commit -v --amend --no-edit && git push origin 
 
 # An easier way to git clone
 function gclone() {
-  git clone "https://github.com/$1.git"
+  git clone "git@github.com:$1.git"
+}
+
+# For what this is doing, see this medium article:
+# https://medium.com/@fredrikanderzon/setting-up-ssh-keys-for-multiple-bitbucket-github-accounts-a5244c28c0ac
+function keygen() {
+  md ~/.ssh
+
+  if [ ! -f "$HOME/.ssh/id_rsa" ]; then
+    ssh-keygen -t rsa -f "$HOME/.ssh/id_rsa" -N ""
+    ssh-add "$HOME/.ssh/id_rsa"
+  fi
+
+  ssh-keygen -t rsa -C $2 -f "$HOME/.ssh/$2" -N ""
+  ssh-add "$HOME/.ssh/$2"
+
+  touch "$HOME/.ssh/config"
+
+  if ! grep -q "Host $1" "$HOME/.ssh/config"; then
+    echo "Host $1\n  HostName $1\n  IdentityFile $HOME/.ssh/id_rsa\n" >> "$HOME/.ssh/config"
+  fi
+
+  if ! grep -q "Host $2.$1" "$HOME/.ssh/config"; then
+    echo "Host $2.$1\n  HostName $1\n  IdentityFile $HOME/.ssh/$2\n" >> "$HOME/.ssh/config"
+  fi
+
+  pbcopy < "$HOME/.ssh/id_rsa.pub"
 }
 
 # grepe is a numbered case insensitive recursive search in current dir
