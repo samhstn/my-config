@@ -10,6 +10,8 @@
 
 + [**Iterm2**](https://github.com/shouston3/My-Config/tree/master#iterm2) - For a better terminal
 
++ [**Docker**](https://github.com/shouston3/My-Config/tree/master#docker) - For configuring reliable deployments
+
 ## Programs to install
 
 + [**Zsh**](https://github.com/shouston3/My-Config/tree/master#zsh)
@@ -138,6 +140,16 @@ Columns: 250, Rows: 100 - For a full screen terminal window each session
 
 **`> Preferences > Profiles > Terminal > Notifications`**
 Tick `Silence bell`
+
+----
+
+#### Docker
+
+<img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png" align="right" height="150px" />
+
+Docker desktop can be downloaded from here: https://docs.docker.com/docker-for-mac/install/
+
+You may have to log in to [`DockerHub`](https://hub.docker.com/) to perform the download.
 
 ----
 
