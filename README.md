@@ -55,6 +55,8 @@ The steps for cleaning your mac are as follows:
 
 + [**Ngrok**](https://github.com/shouston3/My-Config/tree/master#ngrok)
 
++ [**Ffmpeg and Gifsicle**](https://github.com/shouston3/My-Config/tree/master#ffmpeg-and-gifsicle)
+
 ## Misc
 
 + [**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
@@ -362,6 +364,29 @@ Install with:
 
 ```bash
 brew cask install ngrok
+```
+
+----
+
+#### Ffmpeg and Gifsicle
+
+[Ffmpeg](https://www.ffmpeg.org/) and [Gifsicle](https://www.lcdf.org/gifsicle/) can be used to convert `.mov` files to `.gif`
+
+Inspired by [this `gist`](https://gist.github.com/dergachev/4627207)
+
+Install with:
+
+```bash
+brew install ffmpeg
+brew cask install x-quartz #dependency for gifsicle, only required for mountain-lion and above
+open /usr/local/Cellar/x-quartz/2.7.4/XQuartz.pkg # runs the XQuartz installer
+brew install gifsicle
+```
+
+If you have `sams-config` `zsh` plugin installed, you can convert any `.mov` file to `.gif`, by running the command:
+
+```bash
+movtogif ~/path/to/file.mov
 ```
 
 ----
