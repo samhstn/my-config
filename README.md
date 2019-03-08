@@ -1,5 +1,20 @@
 # My OSX Configuration
 
+## Cleaning your mac
+
+It is good to factory reset your mac often, to be aware of everything you have installed and to remove unwanted clutter.
+
+The steps for cleaning your mac are as follows:
+
++ Back up what you need
++ Boot your mac in recovery mode (Restart while holding `Cmd + R`)
++ Select `Disk Utility`, then click `Continue`
++ Click `Internal > Untitled`, then `Erase`
++ Click `Erase` in the prompt
++ Once this has completed, click `Done`
++ Close the window by clicking the red cross in the top left
++ Click `Reinstall macOS`, then `Continue`
+
 ## Applications to download
 
 + [**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
