@@ -369,7 +369,7 @@ brew install grip
 
 ----
 
-#### Ngrok
+#### Ngrok
 
 [Ngrok](https://ngrok.com) makes it really easy to spin up a quick public `http` url.
 
@@ -381,7 +381,7 @@ brew cask install ngrok
 
 ----
 
-#### Ffmpeg and Gifsicle
+#### Ffmpeg and Gifsicle
 
 [Ffmpeg](https://www.ffmpeg.org/) and [Gifsicle](https://www.lcdf.org/gifsicle/) can be used to convert `.mov` files to `.gif`
 
