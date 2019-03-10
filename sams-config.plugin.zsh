@@ -1,23 +1,12 @@
-alias desk='cd ~/Desktop && ls'
-alias doc='cd ~/Documents && ls'
-alias down='cd ~/Downloads && ls'
-alias proj='cd ~/proj && ls'
-alias zrc='mvim -v ~/.zshrc'
-alias vrc='mvim -v ~/.vimrc'
-alias cl='clear'
-alias colours='spectrum_ls'
+alias proj='cd $HOME/proj && ls'
+alias zrc='mvim -v $HOME/.zshrc'
+alias vrc='mvim -v $HOME/.vimrc'
 alias n='npm run'
-alias lll='ls' # for typing ls with one hand
 alias pg='postgres -D /usr/local/var/postgres'
-alias ss='echo "sourcing zshrc"; source ~/.zshrc'
-alias ns='npm start'
-alias nt='npm t'
-alias nw='npm run watch'
-alias za='mvim -v ~/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh'
-alias ze='mvim -v ~/.zsh_envs'
+alias ss='echo "sourcing zshrc"; source $HOME/.zshrc'
+alias za='mvim -v $HOME/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh'
+alias ze='mvim -v $HOME/.zsh_envs'
 alias m='mvim -v'
-alias ms='mix phx.server'
-alias mpr='mix phx.routes'
 alias python=python3
 alias pip=pip3
 alias dj='python manage.py'
@@ -25,6 +14,9 @@ alias ggpuhs=ggpush
 # add everything, amend last commit and force push.
 # consider commenting this command if it's too destructive, but I like it.
 alias gcc!='git add --all && git commit -v --amend --no-edit && git push origin $(git_current_branch) -f'
+alias myip='ifconfig | grep "inet" | grep -v "127.0.0.1" | awk "{print \$2}"'
+# show all the sripts in your package.json
+alias s='node -e "console.log(require(\"./package.json\").scripts);"'
 
 # An easier way to git clone
 function gclone() {
@@ -34,7 +26,7 @@ function gclone() {
 # For what this is doing, see this medium article:
 # https://medium.com/@fredrikanderzon/setting-up-ssh-keys-for-multiple-bitbucket-github-accounts-a5244c28c0ac
 function keygen() {
-  md ~/.ssh
+  md "$HOME/.ssh"
 
   if [ ! -f "$HOME/.ssh/id_rsa" ]; then
     ssh-keygen -t rsa -f "$HOME/.ssh/id_rsa" -N ""
@@ -126,18 +118,13 @@ function movtogif() {
   gifsicle --optimize=3 --delay=3 > "$(echo $1 | sed 's/\.mov$//').gif"
 }
 
-# `$ s` shows all the sripts in your package.json
-function s() {
-  node -e "console.log(require('./package.json').scripts);"
-}
-
 function addtopath() {
-  if [[ $PATH != *"$1"* ]]; then
-    PATH=$PATH:$1
+  if [[ "$PATH" != *"$1"* ]]; then
+    PATH="$PATH:$1"
   fi
 }
 
 # A place for all our environment variables
-if [ -f $HOME/.zsh_envs ]; then
-  source $HOME/.zsh_envs
+if [ -f "$HOME/.zsh_envs" ]; then
+  source "$HOME/.zsh_envs"
 fi
