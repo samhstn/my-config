@@ -51,7 +51,7 @@ function keygen() {
 
 # grepe is a numbered case insensitive recursive search in current dir
 function grepe() {
-  git grep --no-index --exclude-standard $1 | # grep ignoring all files in .gitignore
+  git grep -i --no-index --exclude-standard $1 | # grep ignoring all files in .gitignore
   egrep -v '.{200}' | # ignore lines which are longer than 200
   awk '{print NR, $0}' | # output of above command with line numbers
   grep $1 # highlight the original search
