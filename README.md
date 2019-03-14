@@ -168,6 +168,8 @@ Docker desktop can be downloaded from here: https://docs.docker.com/docker-for-m
 
 You may have to log in to [`DockerHub`](https://hub.docker.com/) to perform the download.
 
+<br><br><br>
+
 ----
 
 #### Zsh
