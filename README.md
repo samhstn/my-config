@@ -88,12 +88,6 @@ The steps for cleaning your mac are as follows:
 
 <br><br>
 
-<img src="https://getadblock.com/images/adblock_logo_stripe_test.png" align="right" height="80" />
-
-+ [Adblock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) - Because I don't like seeing adverts
-
-<br><br>
-
 <img src="https://github.com/maximelebreton/quick-javascript-switcher/raw/master/src/icons/icon-48.png" align="right" height="80" />
 
 + [Quick Javascript Switcher](https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje) - I like to turn this off and on
