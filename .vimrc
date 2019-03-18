@@ -17,11 +17,13 @@ set expandtab " On pressing tab, insert spaces not tabs
 " key remappings
 nmap ; :
 vmap ; :
-nnoremap D d$
-nnoremap Y y$
+" map non-breaking space char to normal space char
+imap   <space>
+nmap D d$
+nmap Y y$
 nnoremap , ;
 vnoremap , ;
-nnoremap q; q:
+nmap q; q:
 
 " Eatchar function described in vimhelp
 func! Eatchar(pat)
@@ -39,8 +41,8 @@ func! SetTabs(tablength)
 endfunc
 
 " Change tab spacing to 2 or 4
-nnoremap <leader>4 :call SetTabs(4)<cr>
-nnoremap <leader>2 :call SetTabs(2)<cr>
-nnoremap <leader>q :q!<cr>
+nmap <leader>4 :call SetTabs(4)<cr>
+nmap <leader>2 :call SetTabs(2)<cr>
+nmap <leader>q :q!<cr>
 
 syntax enable 
