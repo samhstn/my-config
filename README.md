@@ -17,50 +17,50 @@ The steps for cleaning your mac are as follows:
 
 ## Applications to download
 
-+ [**Googe Chrome**](https://github.com/shouston3/My-Config/tree/master#googe-chrome) - My browser choice
++ [**Googe Chrome**](https://github.com/samhstn/my-config/tree/master#googe-chrome) - My browser choice
 
-+ [**Karabiner-Elements**](https://github.com/shouston3/My-Config/tree/master#karabiner-elements) - For key remappings
++ [**Karabiner-Elements**](https://github.com/samhstn/My-Config/tree/master#karabiner-elements) - For key remappings
 
-+ [**Spectacle**](https://github.com/shouston3/My-Config/tree/master#spectacle) - For quick setting of application window sizes
++ [**Spectacle**](https://github.com/samhstn/My-Config/tree/master#spectacle) - For quick setting of application window sizes
 
-+ [**Iterm2**](https://github.com/shouston3/My-Config/tree/master#iterm2) - For a better terminal
++ [**Iterm2**](https://github.com/samhstn/My-Config/tree/master#iterm2) - For a better terminal
 
-+ [**Docker**](https://github.com/shouston3/My-Config/tree/master#docker) - For configuring reliable deployments
++ [**Docker**](https://github.com/samhstn/My-Config/tree/master#docker) - For configuring reliable deployments
 
 ## Programs to install
 
-+ [**Zsh**](https://github.com/shouston3/My-Config/tree/master#zsh)
++ [**Zsh**](https://github.com/samhstn/My-Config/tree/master#zsh)
 
-+ [**Vim**](https://github.com/shouston3/My-Config/tree/master#vim)
++ [**Vim**](https://github.com/samhstn/My-Config/tree/master#vim)
 
-+ [**Homebrew**](https://github.com/shouston3/My-Config/tree/master#homebrew)
++ [**Homebrew**](https://github.com/samhstn/My-Config/tree/master#homebrew)
 
-+ [**Git**](https://github.com/shouston3/My-Config/tree/master#git)
++ [**Git**](https://github.com/samhstn/My-Config/tree/master#git)
 
-+ [**AWS**](https://github.com/shouston3/My-Config/tree/master#aws)
++ [**AWS**](https://github.com/samhstn/My-Config/tree/master#aws)
 
-+ [**Node**](https://github.com/shouston3/My-Config/tree/master#node)
++ [**Node**](https://github.com/samhstn/My-Config/tree/master#node)
 
-+ [**Elixir**](https://github.com/shouston3/My-Config/tree/master#elixir)
++ [**Elixir**](https://github.com/samhstn/My-Config/tree/master#elixir)
 
-+ [**Python**](https://github.com/shouston3/My-Config/tree/master#python)
++ [**Python**](https://github.com/samhstn/My-Config/tree/master#python)
 
-+ [**Postgres**](https://github.com/shouston3/My-Config/tree/master#postgres)
++ [**Postgres**](https://github.com/samhstn/My-Config/tree/master#postgres)
 
-+ [**Redis**](https://github.com/shouston3/My-Config/tree/master#redis)
++ [**Redis**](https://github.com/samhstn/My-Config/tree/master#redis)
 
-+ [**Heroku toolbelt**](https://github.com/shouston3/My-Config/tree/master#heroku-toolbelt)
++ [**Heroku toolbelt**](https://github.com/samhstn/My-Config/tree/master#heroku-toolbelt)
 
-+ [**Grip**](https://github.com/shouston3/My-Config/tree/master#grip)
++ [**Grip**](https://github.com/samhstn/My-Config/tree/master#grip)
 
-+ [**Ngrok**](https://github.com/shouston3/My-Config/tree/master#ngrok)
++ [**Ngrok**](https://github.com/samhstn/My-Config/tree/master#ngrok)
 
-+ [**Ffmpeg and Gifsicle**](https://github.com/shouston3/My-Config/tree/master#ffmpeg-and-gifsicle)
++ [**Ffmpeg and Gifsicle**](https://github.com/samhstn/My-Config/tree/master#ffmpeg-and-gifsicle)
 
 ## Misc
 
-+ [**Misc**](https://github.com/shouston3/My-Config/tree/master#misc-1)
-+ [**Config installation**](https://github.com/shouston3/My-Config/tree/master#config-installation)
++ [**Misc**](https://github.com/samhstn/My-Config/tree/master#misc-1)
++ [**Config installation**](https://github.com/samhstn/My-Config/tree/master#config-installation)
 
 ----
 
@@ -170,13 +170,11 @@ You may have to log in to [`DockerHub`](https://hub.docker.com/) to perform the 
 
 The modern shell supported by an [awesome community](http://ohmyz.sh/)
 
-See installation of my config [below](https://github.com/shouston3/my-config#config-installation)
-
 ----
 
 #### Vim
 
-See installation of my config [below](https://github.com/shouston3/my-config#config-installation)
+See installation of my config [below](https://github.com/samhstn/my-config#config-installation)
 
 I use `MacVim` in the terminal.
 
@@ -185,8 +183,6 @@ This can be installed with:
 ```bash
 brew install macvim
 ```
-
-I open `vim` in the terminal with `mvim -v` which has been aliased to `alias m='mvim -v'`
 
 ----
 
@@ -428,10 +424,8 @@ My key repeat settings found in `System Preferences > Keyboard` are:
 My config can be installed with the following commands:
 
 ```bash
-export RAW_MY_CONF_GH_URL="https://raw.githubusercontent.com/samhstn/my-config/master"
-
 # Configure our `.vimrc`
-curl -SLs "$RAW_MY_CONF_GH_URL/.vimrc" > ~/.vimrc
+curl -SLs https://raw.githubusercontent.com/samhstn/my-config/master/.vimrc > ~/.vimrc
 
 # Setup vim packages
 mkdir -p ~/.vim/pack/bundle/start
@@ -443,23 +437,29 @@ git clone git://github.com/tpope/vim-surround.git ~/.vim/pack/bundle/start/vim-s
 # Install zsh - taken from the [`oh-my-zsh` repo](https://github.com/robbyrussell/oh-my-zsh#via-curl)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Add sams theme and plugin
+export RAW_MY_CONF_GH_URL="https://raw.githubusercontent.com/samhstn/my-config/master"
+# Add sams theme, sams plugin and the m tool (https://github.com/samhstn/m)
 md ~/.oh-my-zsh/plugins/sams-config
-curl -SLs "$RAW_MY_CONF_GH_URL/sams-config.plugin.zsh" > ~/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh
-curl -SLs "$RAW_MY_CONF_GH_URL/sams-theme.zsh-theme" > ~/.oh-my-zsh/themes/sams-theme.zsh-theme
+md ~/.oh-my-zsh/plugins/m
+curl -SLs https://raw.githubusercontent.com/samhstn/my-config/master > ~/.oh-my-zsh/plugins/sams-config/sams-config.plugin.zsh
+curl -SLs https://raw.githubusercontent.com/samhstn/my-config/master > ~/.oh-my-zsh/themes/sams-theme.zsh-theme
+curl -SLs https://raw.githubusercontent.com/samhstn/m/master > ~/.oh-my-zsh/plugins/m/m.plugin.zsh
 ```
 
 Now edit your `.zshrc` like so:
 
-```vim
-# Add `sams-theme`
+```zsh
+# Add sams-theme
 ZSH_THEME="sams-theme"
+
+...
 
 # Configure the following plugins
 plugins=(
   git
   sams-config
   vi-mode
+  m
 )
 ```
 
@@ -467,6 +467,6 @@ plugins=(
 
 Now your set up with exactly my configuration!
 
-If you think I have missed anything out, or should be doing something differently let me know in an [issue](https://github.com/shouston3/my-config/issues)
+If you think I have missed anything out, or should be doing something differently let me know in an [issue](https://github.com/samhstn/my-config/issues)
 
 Or through gitter - [![gitter badge](https://img.shields.io/badge/gitter-samhstn-brightgreen.svg)](https://gitter.im/samhstn)
