@@ -1,5 +1,3 @@
-# Colors
-# To see the options run: ♞  colours
 eval directory_box='$FG[070]'
 eval knight='$FG[136]'
 eval git_label='$FG[069]'
@@ -17,4 +15,3 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$git_label%}git:(%{$git_text%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$git_label%}) %{$cross%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$git_label%}) %{$tick%}✔"
-
